@@ -1,0 +1,1067 @@
+// font-family: 'Montserrat', sans-serif;
+
+// COULEURS
+$bleu : #3DBCEF;
+$rose : #E60081;
+$gris-sombre : #232323;
+$gris-header : #141414;
+$noir : #000000;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    // HEADER
+    header {
+        background-color: $gris-header;
+        display: flex;
+        justify-content: center;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+
+            // LOGO BOWLING DU PARC
+            #logo {
+                img {
+                    width: 210px;
+                    height: auto;
+                }
+            }
+
+            // BURGER MENU
+            #burger_menu {
+                display: none;
+
+                @media (max-width: 375px) {
+                    display: flex;
+                }
+
+                // ICON MENU BURGER
+                span {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                // ICON AVANT OUVERTURE DU MENU
+                #bars_btn {
+                    cursor: pointer;
+                    display: none;
+                    width: max-content;
+                    margin: auto;
+                    justify-self: center;
+                    width: 33.3333336;
+
+                    @media (max-width: 375px) {
+                        display: flex;
+                    }
+
+                    .menu_btn {
+                        color: #FFFFFF;
+                        font-size: 40px;
+                    }
+
+                    .menu_btn:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                // ICON PUR FERMER LE MENU
+                #cross_btn {
+                    cursor: pointer;
+                    display: none;
+                    width: max-content;
+                    margin: auto;
+                    justify-self: center;
+                    width: 33.3333336;
+
+                    @media (max-width: 375px) {
+                        display: none;
+                    }
+
+                    .menu_btn {
+                        color: #FFFFFF;
+                        font-size: 40px;
+                    }
+
+                    .menu_btn:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                // NAVBAR CONTENT BURGER
+                .overlay {
+                    height: 0vh;
+                    width: 100%;
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0px;
+                    background-color: rgba(0, 0, 0, 0.98);
+                    overflow: hidden;
+                    transition: 0.2s ease;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+                    @media screen and (max-height: 375px) {
+                        // font-size: 40px;
+                        top: 15px;
+                        right: 35px;
+                    }
+
+
+                    /* Position the content inside the overlay */
+                    .overlay-content {
+                        position: relative;
+                        top: 0;
+                        width: 100%;
+                        /* 100% width */
+                        height: 60%;
+                        text-align: center;
+                        /* Centered text/links */
+                        margin-top: 30px;
+                        /* 30px top margin to avoid conflict with the close button on smaller screens */
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+
+                        a {
+                            text-transform: uppercase;
+                            color: #FFFFFF;
+                            font-weight: 400;
+                            font-size: 2em;
+                            text-decoration: none;
+                            user-select: none;
+                        }
+
+                        a:hover,
+                        a:focus {
+                            font-weight: 600;
+                            transition: 0.2s;
+                            color: $bleu;
+                        }
+
+                    }
+                }
+            }
+
+            // NAVBAR FULL SCREEN
+            nav {
+                width: 60%;
+                display: flex;
+                justify-content: flex-end;
+
+                @media (max-width:375px) {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    width: 100%;
+
+                    li {
+                        padding: 10px 10px;
+
+                        a {
+                            color: #FFFFFF;
+                            font-size: 25px;
+                            font-weight: 500;
+                            padding: 0px 0px;
+                            transition-timing-function: ease;
+                        }
+
+                        a:hover {
+                            color: $bleu;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    // MAIN
+    main {
+
+        // SECTION INTRO BOWLING
+        #sct_intro_bowling {
+            background-color: $bleu;
+            width: 100%;
+            height: 65vh;
+            display: flex;
+            align-items: flex-end;
+
+            @media (max-width:375px) {
+                height: 40vh;
+            }
+
+            .container {
+                background: url(assets/images/banniere_bowling.jpg) no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                height: 97%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .texte_intro {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 60%;
+                    min-width: 50%;
+                    max-width: 95%;
+
+                    @media (max-width:375px) {
+                        height: 80%;
+                    }
+
+                    .titre_sct {
+                        color: white;
+                        font-size: 6.25em;
+                        font-weight: 700;
+                        box-shadow: 0px 0px 10px #141414;
+                        padding: 0px 30px;
+                        text-shadow: 0px 0px 20px #141414;
+
+                        @media (max-width:375px) {
+                            font-size: 3.5em;
+                        }
+                    }
+
+                    .paragraphe_sct {
+                        box-shadow: 0px 0px 10px #141414;
+                        background-color: rgba($color: #000000, $alpha: 0.6);
+                        border-radius: 20px;
+                        padding: 0px 30px;
+                        font-size: 1.875em;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+                        font-weight: 500;
+
+                        @media (max-width:375px) {
+                            font-size: 1em;
+                        }
+                    }
+
+                    .btn_bleu {
+                        font-size: 1.25em;
+                        font-weight: 700;
+                        background-color: $bleu;
+                        width: 250px;
+                        height: 60px;
+                        border-radius: 30px;
+                        color: #FFFFFF;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-transform: uppercase;
+                        user-select: none;
+
+                        @media (max-width:375px) {
+                            font-size: 1em;
+                        }
+                    }
+
+                    .btn_bleu:hover {
+                        background-color: $rose;
+                        box-shadow: 0px 0px 10px $noir;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+
+        // SECTION ESPACE BOWLING
+        #sct_espace_bowling {
+            background-color: #ececec;
+            height: 70vh;
+            min-height: 70vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:375px) {
+                height: 80vh;
+            }
+
+            // CONTAINER DE LA SECTION ESPACE BOWLING
+            .container {
+                width: 80%;
+                height: 80%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                @media (max-width:375px) {
+                    width: 95%;
+                    height: 90%;
+                }
+
+                // CONTAINER TEXTE
+                .texte_intro {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 50%;
+                    height: 100%;
+
+                    @media (max-width:375px) {
+                        width: 100%;
+                        height: 95%;
+                    }
+
+                    .titre_sct {
+                        font-size: 3em;
+                        color: $noir;
+                        border-bottom: 3px solid $bleu;
+                        text-transform: uppercase;
+                        font-weight: 700;
+
+                        @media (max-width:375px) {
+                            font-size: 1.5em;
+                        }
+                    }
+
+                    .paragraphe_sct {
+                        font-size: 1.375em;
+                        font-weight: 500;
+
+                        @media (max-width:375px) {
+                            text-align: justify;
+                            font-size: 1em;
+                        }
+                    }
+
+                }
+
+                // CONTAINER ILLUSTRATION
+                #illustration_espace_bowling {
+                    width: 46%;
+                    height: 100%;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    @media (max-width:375px) {
+                        display: none;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        // SECTION HORAIRES ET TARIFS BOWLING
+        #sct_tarifs_horaires {
+            background: url(assets/images/banniere_vignettes_tarifs_horaires.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            // background-attachment: fixed;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .container {
+                width: 90%;
+                height: 100%;
+                padding: 5% 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                @media (max-width:375px) {
+                    flex-direction: column;
+                    width: 95%;
+                }
+
+                // MISE EN FORME DE LA VIGNETTE
+                .vignette_type {
+                    background-color: $gris-sombre;
+                    width: 700px;
+                    height: 750px;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    box-shadow: 0px 0px 20px #232323;
+
+                    @media (max-width:375px) {
+                        width: 100%;
+                        height: 500px;
+                        margin: 2% 0;
+                    }
+
+                    // TITRE DE LA VIGNETTTE + ICON
+                    .titre_vignette {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 15%;
+
+                        h2 {
+                            font-size: 2.875em;
+                            color: #FFFFFF;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            margin-right: 15px;
+
+                            @media (max-width:375px) {
+                                font-size: 2em;
+                            }
+                        }
+
+                        i {
+                            color: $rose;
+                            font-size: 2.875em;
+                        }
+                    }
+
+                    // LISTE HORAIRES
+                    #liste_horaires {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        overflow: hidden;
+
+                        .journée {
+                            height: 75px;
+                            width: 100%;
+                            background-color: #f2f2f2;
+                            margin-bottom: 5px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            user-select: none;
+
+                            @media (max-width:375px) {
+                                height: 40px;
+                            }
+
+                            .jour {
+                                color: $bleu;
+                                text-transform: uppercase;
+                                font-size: 2.5em;
+                                font-weight: 700;
+                                margin-left: 15px;
+
+                                @media (max-width:375px) {
+                                    font-size: 1.625em;
+                                }
+                            }
+
+                            .horaire {
+                                font-size: 1.625em;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                                margin-right: 20px;
+
+                                @media (max-width:375px) {
+                                    font-size: 1.25em;
+                                }
+                            }
+                        }
+
+                        .journée:hover {
+                            background-color: #131313;
+                            color: $rose;
+
+                            .jour {
+                                color: white;
+                            }
+                        }
+                    }
+
+                    // MARDI*
+                    #info_mardi {
+                        font-size: 1em;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                        width: 98%;
+                        padding-top: 20px;
+                        text-align: center;
+
+                    }
+
+                    // LISTE DES TARIFS
+                    #liste_tarifs {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        .ligne {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            margin-bottom: 5px;
+
+                            .display {
+                                background-color: #f2f2f2;
+                                height: 75px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-transform: uppercase;
+                                text-align: center;
+                                user-select: none;
+
+                                @media (max-width:375px) {
+                                    height: 40px;
+                                }
+                            }
+
+                            .display:hover {
+                                background-color: #131313;
+                                color: #FFFFFF;
+                            }
+
+                            .jours {
+                                width: 50%;
+
+                                .titre_jours {
+                                    font-weight: 600;
+                                    font-size: 1.625em;
+
+                                    @media (max-width:375px) {
+                                        font-size: 1em;
+                                    }
+                                }
+                            }
+
+                            .box_avant_19 {
+                                width: 24%;
+
+                                .prix {
+                                    font-weight: 700;
+                                    font-size: 1.375em;
+
+                                    @media (max-width:375px) {
+                                        font-size: 1em;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            .box_apres_19 {
+                                width: 24%;
+
+                                .prix {
+                                    font-weight: 700;
+                                    font-size: 1.375em;
+
+                                    @media (max-width:375px) {
+                                        font-size: 1em;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            .chaussures {
+                                width: 49%;
+
+                                .prix {
+                                    font-weight: 700;
+                                    font-size: 1.375em;
+
+                                    @media (max-width:375px) {
+                                        font-size: 1em;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // INFOS COMPLEMANTAIRES
+                    #infos_complémentaires {
+                        width: 100%;
+                        height: 15%;
+                        padding-top: 20px;
+                        color: #FFFFFF;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+
+                        p {
+                            text-align: center;
+                            font-size: 1em;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        // SECTION INTRO BOWLING
+        #sct_intro_arcade {
+            background-color: $gris-sombre;
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            align-items: flex-end;
+
+            @media (max-width:375px) {
+                height: 40vh;
+            }
+
+            .container {
+                background: url(assets/images/banniere_arcade.jpg) no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                height: 98%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .texte_intro {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 60%;
+                    min-width: 60%;
+                    max-width: 95%;
+
+                    @media (max-width:375px) {
+                        height: 80%;
+                    }
+
+
+                    .titre_sct {
+                        color: white;
+                        font-size: 6.25em;
+                        font-weight: 700;
+                        box-shadow: 0px 0px 10px #141414;
+                        padding: 0px 30px;
+                        text-shadow: 0px 0px 20px #141414;
+
+                        @media (max-width:375px) {
+                            font-size: 3.5em;
+                        }
+                    }
+
+                    .paragraphe_sct {
+                        box-shadow: 0px 0px 10px #141414;
+                        background-color: rgba($color: #000000, $alpha: 0.6);
+                        border-radius: 20px;
+                        padding: 0px 30px;
+                        font-size: 1.875em;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        text-align: center;
+
+                        @media (max-width:375px) {
+                            font-size: 1em;
+                        }
+                    }
+
+                    .btn_bleu {
+                        font-size: 1.25em;
+                        font-weight: 700;
+                        background-color: $rose;
+                        width: 250px;
+                        height: 60px;
+                        border-radius: 30px;
+                        color: #FFFFFF;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-transform: uppercase;
+                        user-select: none;
+
+                        @media (max-width:375px) {
+                            font-size: 1em;
+                        }
+                    }
+
+                    .btn_bleu:hover {
+                        background-color: $bleu;
+                        box-shadow: 0px 0px 10px $noir;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+
+        // SLIDER IMAGES ARCADES
+        #sct_espace_arcade {
+            background-color: #ececec;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:375px) {
+                height: 80vh;
+            }
+
+            .container {
+                width: 80%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                @media (max-width:375px) {
+                    width: 95%;
+                    height: 95%;
+                }
+
+                // TEXTE INTRO SCT SLIDER
+                .texte_intro {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 20%;
+                    text-align: center;
+
+                    @media (max-width:375px) {
+                        width: 100%;
+                        height: 40%;
+                    }
+
+                    .titre_sct {
+                        font-size: 3em;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: $noir;
+                        border-bottom: 3px solid $rose;
+
+                        @media (max-width:375px) {
+                            font-size: 1.5em;
+                        }
+                    }
+
+                    .paragraphe_sct {
+                        font-size: 1.375em;
+                        font-weight: 500;
+
+                        @media (max-width:375px) {
+                            text-align: justify;
+                            font-size: 1em;
+                        }
+                    }
+                }
+
+                // SLIDES & FLECHES
+                #slider_espace_arcade {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 90%;
+                    height: 70%;
+                    margin-top: 50px;
+
+                    @media (max-width:375px) {
+                        width: 100%;
+                        justify-content: center;
+                        height: auto;
+                        margin: 0;
+                    }
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 8em;
+                        cursor: pointer;
+                        user-select: none;
+
+                        @media (max-width:375px) {
+                            display: none;
+                        }
+
+                        i {
+                            color: #3c3c3c;
+                        }
+
+                        i:hover {
+                            color: $gris-sombre;
+                        }
+
+                        i:active {
+                            transform: scale(0.95);
+                        }
+                    }
+
+                    a:hover {
+                        color: $gris-sombre;
+                    }
+
+
+                    // MISE EN FORME DE LA BOARD
+                    .mySlides {
+                        display: none;
+                        opacity: 1;
+                        user-select: none;
+                        width: 60%;
+                        height: 100%;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        background-color: rgb(24, 24, 24);
+                        box-shadow: 0px 0px 10px #131313;
+
+                        @media (max-width:375px) {
+                            width: 90%;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    // TRANSITION DES SLIDES
+                    .fade_toright {
+                        animation-name: fadetoright;
+                        animation-duration: 1.5s;
+                        animation-timing-function: ease-out;
+
+
+                        @media (max-width:375px) {
+                            animation: none;
+                        }
+                    }
+
+                    @keyframes fadetoright {
+                        from {
+                            transform: translateX(-5%);
+                            opacity: 0.4;
+                        }
+
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+
+                    .fade_toleft {
+                        animation-name: fade_toleft;
+                        animation-duration: 1.5s;
+                        animation-timing-function: ease-out;
+
+                        @media (max-width:375px) {
+                            animation: none;
+                        }
+                    }
+
+                    @keyframes fade_toleft {
+                        from {
+                            transform: translateX(5%);
+                            opacity: 0.4;
+                        }
+
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                // DOTS
+                #dots {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    @media (max-width:375px) {
+                        margin: 0;
+                    }
+
+                    .dot {
+                        background-color: #141414;
+                        cursor: pointer;
+                        height: 20px;
+                        width: 20px;
+                        margin: 0 5px;
+                        border-radius: 50%;
+                        transition: 0.6s;
+
+                        @media (max-width:375px) {
+                            height: 15px;
+                            width: 15px;
+                        }
+                    }
+
+                    .active,
+                    .dot:hover {
+                        background-color: $rose;
+                    }
+                }
+            }
+        }
+    }
+
+    // FOOTER
+    footer {
+        height: 600px;
+        width: 100%;
+
+        #top_footer {
+            min-height: 500px;
+            background-color: $gris-sombre;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            // CONTAINER DES LISTES
+            #listes {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+
+                @media (max-width:375px) {
+                    flex-direction: column;
+                }
+
+                // MISE EN FORME DE TOUTES LES LISTES
+                .liste {
+                    @media (max-width:375px) {
+                        margin: 10px 0px;
+                    }
+
+                    // TITRE DE LA LISTE
+                    h4 {
+                        font-size: 25px;
+                        font-weight: 600;
+                        color: white;
+                        margin-bottom: 30px;
+                    }
+
+                    // RACCOURCIS DE LA LISTE
+                    ul {
+                        li {
+                            a {
+                                font-size: 25px;
+                                font-weight: 300;
+                                color: white;
+                                text-transform: uppercase;
+                            }
+
+                            a:hover {
+                                color: $bleu;
+                            }
+
+                            a:active {
+                                color: $rose;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // MENTIONS LÉGALES & POLITIQUE
+            #mentions {
+                display: flex;
+                justify-content: flex-end;
+                width: 80%;
+
+                @media (max-width:375px) {
+                    margin: 10px 0px;
+                }
+
+                ul {
+                    width: 35%;
+                    display: flex;
+                    justify-content: space-between;
+                    justify-items: flex-end;
+
+                    @media (max-width:375px) {
+                        width: 100%;
+                        flex-direction: column;
+                        justify-content: center;
+                        justify-items: center;
+                    }
+
+                    li {
+                        width: auto;
+
+                        a {
+                            color: white;
+                            text-transform: capitalize;
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+
+                        a:hover {
+                            color: $rose;
+                        }
+                    }
+
+                    p {
+                        color: $rose;
+                        padding: 0px 10px;
+
+                        @media (max-width:375px) {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // COPYRIGHT
+        #copyrights {
+            height: 100px;
+            background-color: $gris-header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:375px) {
+                text-align: center;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                color: white;
+
+                @media (max-width:375px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

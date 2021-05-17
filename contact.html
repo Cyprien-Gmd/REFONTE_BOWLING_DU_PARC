@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7e36d96364.js" crossorigin="anonymous"></script>
+
+    <title>Bowling du Parc à la Roche sur Yon</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="assets/images/logo.png" alt="logo bowling du parc à la roche sur yon">
+            </div>
+
+            <!-- NAVBAR -->
+            <nav id="navbar_fullscreen">
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="activités.html">ACTIVITÉS</a></li>
+                    <li><a href="prestations.html">PRESTATIONS</a></li>
+                    <li><a href="bowling_sportif.html">BOWLING SPORTIF</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- NAVBAR PHONE -->
+            <div id="burger_menu">
+                <!-- BOUTONS -->
+                <!-- BOUTON MENU FERMÉ -->
+                <span onclick="openNav()" id="bars_btn">
+                    <i class="fas fa-bars menu_btn"></i>
+                </span>
+                <!-- BOUTON MENU OUVERT-- -->
+                <span onclick="closeNav()" id="cross_btn">
+                    <i class="fas fa-times menu_btn closebtn"></i>
+                </span>
+
+                <div id="myNav" class="overlay">
+                    <!-- LISTE NAV -->
+                    <div class="overlay-content">
+                        <a href="index.html">ACCUEIL</a>
+                        <a href="activités.html">ACTIVITÉS</a>
+                        <a href="prestations.html">PRESTATIONS</a>
+                        <a href="bowling_sportif.html">BOWLING <br> SPORTIF</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- SECTION INTRO CONTACT BANNIERE -->
+        <section id="sct_intro_contact">
+            <div class="container">
+                <div class="texte_intro">
+
+                    <!-- TITRE SCT INTRO -->
+                    <h2 class="titre_sct">
+                        CONTACT
+                    </h2>
+
+                    <!-- DESCRIPTION SCT INTRO -->
+                    <p class="paragraphe_sct">
+                        une question ou besoin d'information ?
+                    </p>
+
+                    <!-- BTN SCT INTRO -->
+                    <a href="#sct_formulaire" class="btn_bleu">
+                        contactez-nous
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION FORMULAIRE -->
+        <section id="sct_formulaire">
+            <div class="container">
+
+                <!-- PARTIE FORMULAIRE -->
+                <div id="content_formulaire">
+                    <!-- FORMULAIRE -->
+                    <div id="formulaire">
+                        <!-- TITRE FORMULAIRE -->
+                        <h3>
+                            contactez-nous
+                        </h3>
+                        <!-- CHAMPS DU FORMULAIRE -->
+                        <form action="">
+                            <fieldset id="input_form">
+                                <input type="text" name="" id="" placeholder="VOTRE NOM" required>
+                                <input type="text" name="" id="" placeholder="VOTRE PRÉNOM" required>
+                                <input type="email" name="" id="" placeholder="VOTRE EMAIL" required>
+                                <input type="tel" name="" id="" placeholder="VOTRE TÉLÉPHONE" required>
+                            </fieldset>
+
+
+
+                            <fieldset id="textarea_form">
+                                <textarea type="text" name="text" id="" placeholder="VOTRE MESSAGE"></textarea>
+                            </fieldset>
+
+                            <!-- BOUTON ENVOYER -->
+                            <input type="submit" value="envoyer" id="btn_submit">
+                        </form>
+                    </div>
+
+                    <!-- ILLUSTRATION FORMULAIRE -->
+                    <div id="illustration_formulaire">
+                        <img src="assets/images/illustration_formulaire_contact_gif.gif"
+                            alt="huit quilles noires en ligne avec une boule de bowling devant">
+                    </div>
+                </div>
+
+                <!-- PARTIE ADRESSE ET HORAIRES -->
+                <div id="content_adresse">
+
+                    <!-- NOUS TROUVER -->
+                    <div id="nous_trouver">
+                        <h3>
+                            nous trouver
+                        </h3>
+
+                        <div id="liste_infos">
+
+                            <!-- ADRESSE -->
+                            <div class="info">
+                                <div class="titre_info">
+                                    <a href="#sct_maps"><i class="fas fa-map-pin"></i></a>
+                                    <h4>
+                                        adresse
+                                    </h4>
+                                </div>
+
+                                <p>
+                                    boulevard don quichotte
+                                </p>
+
+                                <p class="p_bold">85000 la roche sur yon</p>
+                            </div>
+
+                            <!-- TÉLÉPHONE -->
+                            <div class="info">
+                                <div class="titre_info">
+                                    <a><i class="fas fa-phone"></i></a>
+                                    <h4>
+                                        téléphone
+                                    </h4>
+                                </div>
+
+                                <p class="p_bold">02 51 37 58 85</p>
+                            </div>
+
+                            <!-- FACEBOOK -->
+                            <div class="info">
+                                <div class="titre_info">
+                                    <a href="https://fr-fr.facebook.com/Bowling-Du-Parc-1050899028337009/"
+                                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <h4>
+                                        facebook
+                                    </h4>
+                                </div>
+
+                                <p class="p_bold">bowling du parc</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- NOS HORAIRES -->
+                    <div id="nos_horaires">
+
+                        <!-- TITRE DE LA VIGNETTE + ICON -->
+                        <div class="titre_vignette">
+                            <h2>
+                                nos horaires
+                            </h2>
+                        </div>
+
+                        <!-- LISTE HORAIRES -->
+                        <div id="liste_horaires">
+
+                            <!-- LUNDI -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    lundi
+                                </h3>
+
+                                <p class="horaire">
+                                    fermé
+                                </p>
+                            </div>
+
+                            <!-- MARDI -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    mardi*
+                                </h3>
+
+                                <p class="horaire">
+                                    fermé
+                                </p>
+                            </div>
+
+                            <!-- MERCREDI -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    mercredi
+                                </h3>
+
+                                <p class="horaire">
+                                    15:00 / 00:00
+                                </p>
+                            </div>
+
+                            <!-- JEUDI -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    jeudi
+                                </h3>
+
+                                <p class="horaire">
+                                    15:00 / 00:00
+                                </p>
+                            </div>
+
+                            <!-- VENDREDI -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    vendredi
+                                </h3>
+
+                                <p class="horaire">
+                                    15:00 / 01:00
+                                </p>
+                            </div>
+
+                            <!-- SAMEDI -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    samedi
+                                </h3>
+
+                                <p class="horaire">
+                                    15:00 / 03:00
+                                </p>
+                            </div>
+
+                            <!-- DIMANCHE -->
+                            <div class="journée">
+                                <h3 class="jour">
+                                    dimanche
+                                </h3>
+
+                                <p class="horaire">
+                                    15:00 / 20:00
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <!-- MARDI* -->
+                        <p id="info_mardi">
+                            *Le mardi fermé sauf sur réservation de groupe > à 30 personnes (ouvert pendant les vacances
+                            scolaires de la Zone B 15:00 / 00:00)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION MAPS -->
+        <section id="sct_maps">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.961133681084!2d-1.4102492842031262!3d46.66702846039883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48042f78cdb94a0d%3A0x3867a8e4474a4779!2sBOWLING%20du%20Parc!5e0!3m2!1sfr!2sus!4v1620833149701!5m2!1sfr!2sus"
+                width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div id="top_footer">
+            <div id="listes">
+                <!-- LISTE ACCUEIL -->
+                <div class="liste" id="liste_accueil">
+                    <h4>
+                        ACCUEIL
+                    </h4>
+
+                    <ul>
+                        <li><a href="index.html#sct_présentation">présentation</a></li>
+                        <li><a href="index.html#sct_activités">activités</a></li>
+                        <li><a href="index.html#sct_galerie">galerie</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE ACTIVITÉS -->
+                <div class="liste" id="liste_activités">
+                    <h4>
+                        ACTIVITÉS
+                    </h4>
+
+                    <ul>
+                        <li><a href="activités.html#sct_intro_bowling">bowling</a></li>
+                        <li><a href="activités.html#sct_intro_arcade">espace arcade</a></li>
+                        <li><a href="">bar & snacking</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE PRESTATIONS -->
+                <div class="liste" id="liste_prestation">
+                    <h4>
+                        PRESTATIONS
+                    </h4>
+
+                    <ul>
+                        <li><a href="">particulier</a></li>
+                        <li><a href="">professionnel</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE BOWLING SPORTIF -->
+                <div class="liste" id="liste_bowling_sportif">
+                    <h4>
+                        BOWLING SPORTIF
+                    </h4>
+
+                    <ul>
+                        <li><a href="">le club</a></li>
+                        <li><a href="">les tournois</a></li>
+                        <li><a href="">les résultats</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE CONTACT -->
+                <div class="liste" id="liste_contact">
+                    <h4>
+                        CONTACT
+                    </h4>
+
+                    <ul>
+                        <li><a href="contact.html#content_formulaire">nous contacter</a></li>
+                        <li><a href="contact.html#nous_trouver">adresse</a></li>
+                        <li><a href="contact.html#nos_horaires">horaires</a></li>
+                        <li><a href="contact.html#sct_maps">nous situer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mentions">
+                <ul>
+                    <li><a href="">mentions légales</a></li>
+                    <p>|</p>
+                    <li><a href="">politique de confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="copyrights">
+            <p>
+                © 2021 Bowling du PArc - La Roche sur Yon - site réalisé par GERMOND Cyprien
+            </p>
+        </div>
+    </footer>
+
+    <!-- LINKS SCRIPTS JS -->
+    <script src="menu.js"></script>
+</body>
+
+</html>

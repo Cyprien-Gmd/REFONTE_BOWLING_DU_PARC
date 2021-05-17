@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7e36d96364.js" crossorigin="anonymous"></script>
+
+    <title>Bowling du Parc à la Roche sur Yon</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="assets/images/logo.png" alt="logo bowling du parc à la roche sur yon">
+            </div>
+
+            <!-- NAVBAR -->
+            <nav id="navbar_fullscreen">
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="activités.html">ACTIVITÉS</a></li>
+                    <li><a href="prestations.html">PRESTATIONS</a></li>
+                    <li><a href="bowling_sportif.html">BOWLING SPORTIF</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- NAVBAR PHONE -->
+            <div id="burger_menu">
+                <!-- BOUTONS -->
+                <!-- BOUTON MENU FERMÉ -->
+                <span onclick="openNav()" id="bars_btn">
+                    <i class="fas fa-bars menu_btn"></i>
+                </span>
+                <!-- BOUTON MENU OUVERT-- -->
+                <span onclick="closeNav()" id="cross_btn">
+                    <i class="fas fa-times menu_btn closebtn"></i>
+                </span>
+
+                <div id="myNav" class="overlay">
+                    <!-- LISTE NAV -->
+                    <div class="overlay-content">
+                        <a href="index.html">ACCUEIL</a>
+                        <a href="activités.html">ACTIVITÉS</a>
+                        <a href="prestations.html">PRESTATIONS</a>
+                        <a href="bowling_sportif.html">BOWLING SPORTIF</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- SECTION PRESENTATION -->
+        <section id="sct_présentation">
+
+            <!-- CONTAINER SECTION PRESENTATION -->
+            <div class="container">
+
+                <!-- CONTENT SCT PRESENTATION -->
+                <div class="content">
+
+                    <!-- TEXTE DE LA SECTION PRESENTATION -->
+                    <div class="texte">
+
+                        <!-- TITRE SECTION PRESENTATION-->
+                        <h2 class="titre_sct">
+                            PRÉSENTATION
+                        </h2>
+
+                        <!-- PARAGRAPHE SECTION PRESENTATION-->
+                        <p class="paragraphe_sct">
+                            Situé à La Roche-sur-Yon en Vendée entre Nantes et La Rochelle, le
+                            Bowling Du Parc vous accueille dans un cadre convivial et agréable.
+                            Venez découvrir les 14 pistes haut de gamme à partir de 15h, mais
+                            aussi le soir où l'ambiance donnera une autre dimension à votre jeu.
+                            Bowling Du Parc vous propose de nombreuses activités de loisirs pour
+                            vous éclater et vous amuser en famille ou entre amis.
+                            Notre espace de jeu est équipé de 14 pistes de bowling.
+                        </p>
+
+                        <p class="paragraphe_sct">
+                            Notre espace le bowling est une formidable opportunité pour profiter
+                            d’une activité entre amis dans la convivialité et la bonne humeur.
+                            Méthodiques et attentifs, nous vous proposons d’organiser des événements qui marient le
+                            plaisir et le professionnalisme.
+                        </p>
+
+                        <!-- BOUTON EN SAVOIR PLUS DE LA SECTION PRESENTATION -->
+                        <a class="btn_bleu" href="#sct_activités">
+                            EN SAVOIR PLUS
+                        </a>
+                    </div>
+
+                    <!-- IMAGE ILLUSTRATION SECTION PRESENTATION -->
+                    <div id="image_bowling">
+                        <img src="assets/images/illustration_section_présentation.jpg"
+                            alt="photo du bowling où l'on voit des tables, des chaises, le bar, l'accueil du bowling">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION ACTIVITÉS -->
+        <section id="sct_activités">
+
+            <!-- CONTAINERS SECTION ACTIVITES -->
+            <div class="containers">
+
+                <!-- CONTAINER TEXTE ACTIVITES -->
+                <div class="container_texte">
+
+                    <!-- IMAGE ILLUSTRATION SECTION ACTIVITES -->
+                    <div id="image_nosactivités">
+                        <img src="assets/images/illustration_nosactivités_accueil.png"
+                            alt="illustration d'une boule de bowling qui tape contre plusieurs quilles">
+                    </div>
+
+                    <!-- TEXTE DE LA SECTION NOS ACTIVITES -->
+                    <div class="texte">
+
+                        <!-- TITRE SECTION NOS ACTIVITES -->
+                        <div class="titre_sct">
+                            <h2>
+                                NOS ACTIVITÉS
+                            </h2>
+                            <a href="#vignette_bowling"><i class="fas fa-chevron-circle-down"></i></a>
+
+                        </div>
+
+                        <!-- PARAGRAPHE SECTION NOS ACTIVITES -->
+                        <p class="paragraphe_sct">
+                            Pour vous faire passer un agréable moment, le bowling met aussi à votre disposition
+                            des tables de billard et un espace jeux vidéo.
+                        </p>
+
+                        <p class="paragraphe_sct">
+                            De plus un snack-bar est à votre disposition.
+                        </p>
+
+                        <p class="paragraphe_sct">
+                            Vous pouvez vous restaurer et boire un verre à toute heure avec une vue directe sur
+                            les pistes de bowling.
+                        </p>
+
+                        <p class="paragraphe_sct">
+                            Pour un moment de détente, vous pourrez vous prélasser sur notre terrasse avec la
+                            vue directe sur le parc du château des Oudairies.
+                        </p>
+
+                        <p class="paragraphe_sct">
+                            Le bowling est un espace privilégié pour :
+                        </p>
+
+                        <p class="paragraphe_sct">
+                            Les moments en famille et entre amis
+                            Les événements professionnels
+                            Les soirées entreprises
+                            Nous mettons tout en œuvre pour que votre projet soit un événement unique.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CONTAINER VIGNETTES ACTIVITES -->
+                <div class="container_vignettes">
+
+                    <!-- VIGNETTE BOWLING -->
+                    <div class="vignette" id="vignette_bowling">
+                        <!-- IMAGE VIGNETTE -->
+                        <div class="image_vignette">
+                            <img src="assets/images/vignette_bowling_accueil.png"
+                                alt="photo des boules de bowling dans le rack">
+                        </div>
+
+                        <!-- TEXTE VIGNETTE -->
+                        <div class="texte_vignette">
+                            <!-- TITRE VIGNETTE -->
+                            <h2 class="titre_vignette">
+                                Bow<span>ling</span>
+                            </h2>
+
+                            <!-- DESCRIPTION VIGNETTE -->
+                            <p class="para_vignette">
+                                Ambiance survoltée et ses nombreux équipements, Fun Bowling
+                                est l’endroit idéal pour des
+                                parties de bowling endiablées…
+                            </p>
+
+                            <!-- BOUTON VIGNETTE -->
+                            <button class="btn_vignette">
+                                <a href="activités.html#sct_espace_bowling">plus de détails</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- VIGNETTE ARCADE -->
+                    <div class="vignette" id="vignette_arcade">
+                        <!-- IMAGE VIGNETTE -->
+                        <div class="image_vignette">
+                            <img src="assets/images/vignette_arcade_accueil.png" alt="photo d'une borne de air hockey">
+                        </div>
+
+                        <!-- TEXTE VIGNETTE -->
+                        <div class="texte_vignette">
+                            <!-- TITRE VIGNETTE -->
+                            <h2 class="titre_vignette">
+                                Arc<span>ade</span>
+                            </h2>
+
+                            <!-- DESCRIPTION VIGNETTE -->
+                            <p class="para_vignette">
+                                Alors, prêts à accomplir une mission dans
+                                laquelle votre sens tactique du jeu et vos réflexes
+                                seront mis à rude épreuve ?…
+                            </p>
+
+                            <!-- BOUTON VIGNETTE -->
+                            <button class="btn_vignette">
+                                <a href="activités.html#sct_espace_arcade">plus de détails</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- VIGNETTE PRESTATIONS & SERVICES -->
+                    <div class="vignette" id="vignette_prestations">
+                        <!-- IMAGE VIGNETTE -->
+                        <div class="image_vignette">
+                            <img src="assets/images/vignette_prestations_accueil.png"
+                                alt="photo du bar, de l'accueil et des pistes de bowling">
+                        </div>
+
+                        <!-- TEXTE VIGNETTE -->
+                        <div class="texte_vignette">
+                            <!-- TITRE VIGNETTE -->
+                            <h2 class="titre_vignette">
+                                Prest<span>ations</span>
+                            </h2>
+
+                            <!-- DESCRIPTION VIGNETTE -->
+                            <p class="para_vignette">
+                                Anniversaires enfants, séminaires, animations,
+                                bowling sportif… il y en a pour tous les goûts !…
+                            </p>
+
+                            <!-- BOUTON VIGNETTE -->
+                            <button class="btn_vignette">
+                                <a href="">plus de détails</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION GALERIE -->
+        <section id="sct_galerie">
+            <div class="container">
+                <!-- TITRE DE LA SECTION -->
+                <h2 class="titre_sct">
+                    GALERIE
+                </h2>
+
+                <!-- GALERIE -->
+                <div class="gallery">
+                    <!-- COLUMN 1 -->
+                    <div class="gallery__column">
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_1.jpg" alt="pistes de bowling" class="gallery__image">
+                                <figcaption class="gallery__caption">Bowling avec lumière noire</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_2.jpg" alt="tapis billard" class="gallery__image">
+                                <figcaption class="gallery__caption">Billard</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_3.jpg" alt="air hockey" class="gallery__image">
+                                <figcaption class="gallery__caption">Air Hockey</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <!-- COLUMN 2 -->
+                    <div class="gallery__column">
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_4.jpg" alt="rack pour les boules de bowling"
+                                    class="gallery__image">
+                                <figcaption class="gallery__caption">Rack pour les boules</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_5.jpg" alt="Rack à chaussures" class="gallery__image">
+                                <figcaption class="gallery__caption">Rack à chaussures</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_6.jpg" alt="photo des pistes et des sièges"
+                                    class="gallery__image">
+                                <figcaption class="gallery__caption">Pistes & Sièges</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <!-- COLUMN 3 -->
+                    <div class="gallery__column">
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_7.jpg" alt="photo des pistes depuis les quilles"
+                                    class="gallery__image">
+                                <figcaption class="gallery__caption">Pistes sous lumière noire</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_8.jpg" alt="photo accueil, bar, pistes"
+                                    class="gallery__image">
+                                <figcaption class="gallery__caption">Accueil, Bar, Pistes</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_9.jpg" alt="Pistes de jours" class="gallery__image">
+                                <figcaption class="gallery__caption">Pistes</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <!-- COLUMN 4 -->
+                    <div class="gallery__column">
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_10.jpg" alt="Salle des machines" class="gallery__image">
+                                <figcaption class="gallery__caption">Salle des machines</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_11.jpg" alt="photo des quilles" class="gallery__image">
+                                <figcaption class="gallery__caption">Quilles</figcaption>
+                            </figure>
+                        </a>
+
+                        <a target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="assets/images/galerie_12.jpg"
+                                    alt="Vue d'ensemble des pistes sous lumière noire" class="gallery__image">
+                                <figcaption class="gallery__caption">Pistes sous lumière noire</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div id="top_footer">
+            <div id="listes">
+                <!-- LISTE ACCUEIL -->
+                <div class="liste" id="liste_accueil">
+                    <h4>
+                        ACCUEIL
+                    </h4>
+
+                    <ul>
+                        <li><a href="index.html#sct_présentation">présentation</a></li>
+                        <li><a href="index.html#sct_activités">activités</a></li>
+                        <li><a href="index.html#sct_galerie">galerie</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE ACTIVITÉS -->
+                <div class="liste" id="liste_activités">
+                    <h4>
+                        ACTIVITÉS
+                    </h4>
+
+                    <ul>
+                        <li><a href="activités.html#sct_intro_bowling">bowling</a></li>
+                        <li><a href="activités.html#sct_intro_arcade">espace arcade</a></li>
+                        <li><a href="">bar & snacking</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE PRESTATIONS -->
+                <div class="liste" id="liste_prestation">
+                    <h4>
+                        PRESTATIONS
+                    </h4>
+
+                    <ul>
+                        <li><a href="">particulier</a></li>
+                        <li><a href="">professionnel</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE BOWLING SPORTIF -->
+                <div class="liste" id="liste_bowling_sportif">
+                    <h4>
+                        BOWLING SPORTIF
+                    </h4>
+
+                    <ul>
+                        <li><a href="">le club</a></li>
+                        <li><a href="">les tournois</a></li>
+                        <li><a href="">les résultats</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE CONTACT -->
+                <div class="liste" id="liste_contact">
+                    <h4>
+                        CONTACT
+                    </h4>
+
+                    <ul>
+                        <li><a href="contact.html#content_formulaire">nous contacter</a></li>
+                        <li><a href="contact.html#nous_trouver">adresse</a></li>
+                        <li><a href="contact.html#nos_horaires">horaires</a></li>
+                        <li><a href="contact.html#sct_maps">nous situer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mentions">
+                <ul>
+                    <li><a href="">mentions légales</a></li>
+                    <p>|</p>
+                    <li><a href="">politique de confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="copyrights">
+            <p>
+                © 2021 Bowling du PArc - La Roche sur Yon - site réalisé par GERMOND Cyprien
+            </p>
+        </div>
+    </footer>
+
+    <!-- LINKS SCRIPTS JS -->
+    <script src="menu.js"></script>
+</body>
+
+</html>

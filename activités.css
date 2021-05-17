@@ -1,0 +1,1436 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body header {
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
+}
+
+body header .container #logo img {
+  width: 210px;
+  height: auto;
+}
+
+body header .container #burger_menu {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  body header .container #burger_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+body header .container #burger_menu span {
+  height: 100%;
+  width: 100%;
+}
+
+body header .container #burger_menu #bars_btn {
+  cursor: pointer;
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 33.3333336;
+}
+
+@media (max-width: 375px) {
+  body header .container #burger_menu #bars_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+body header .container #burger_menu #bars_btn .menu_btn {
+  color: #FFFFFF;
+  font-size: 40px;
+}
+
+body header .container #burger_menu #bars_btn .menu_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body header .container #burger_menu #cross_btn {
+  cursor: pointer;
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 33.3333336;
+}
+
+@media (max-width: 375px) {
+  body header .container #burger_menu #cross_btn {
+    display: none;
+  }
+}
+
+body header .container #burger_menu #cross_btn .menu_btn {
+  color: #FFFFFF;
+  font-size: 40px;
+}
+
+body header .container #burger_menu #cross_btn .menu_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body header .container #burger_menu .overlay {
+  height: 0vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.98);
+  overflow: hidden;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  /* Position the content inside the overlay */
+}
+
+@media screen and (max-height: 375px) {
+  body header .container #burger_menu .overlay {
+    top: 15px;
+    right: 35px;
+  }
+}
+
+body header .container #burger_menu .overlay .overlay-content {
+  position: relative;
+  top: 0;
+  width: 100%;
+  /* 100% width */
+  height: 60%;
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container #burger_menu .overlay .overlay-content a {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 2em;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body header .container #burger_menu .overlay .overlay-content a:hover,
+body header .container #burger_menu .overlay .overlay-content a:focus {
+  font-weight: 600;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #3DBCEF;
+}
+
+body header .container nav {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 375px) {
+  body header .container nav {
+    display: none;
+  }
+}
+
+body header .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+body header .container nav ul li {
+  padding: 10px 10px;
+}
+
+body header .container nav ul li a {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0px 0px;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+body header .container nav ul li a:hover {
+  color: #3DBCEF;
+}
+
+body main #sct_intro_bowling {
+  background-color: #3DBCEF;
+  width: 100%;
+  height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_bowling {
+    height: 40vh;
+  }
+}
+
+body main #sct_intro_bowling .container {
+  background: url(assets/images/banniere_bowling.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 97%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #sct_intro_bowling .container .texte_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 60%;
+  min-width: 50%;
+  max-width: 95%;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_bowling .container .texte_intro {
+    height: 80%;
+  }
+}
+
+body main #sct_intro_bowling .container .texte_intro .titre_sct {
+  color: white;
+  font-size: 6.25em;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 0px 10px #141414;
+          box-shadow: 0px 0px 10px #141414;
+  padding: 0px 30px;
+  text-shadow: 0px 0px 20px #141414;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_bowling .container .texte_intro .titre_sct {
+    font-size: 3.5em;
+  }
+}
+
+body main #sct_intro_bowling .container .texte_intro .paragraphe_sct {
+  -webkit-box-shadow: 0px 0px 10px #141414;
+          box-shadow: 0px 0px 10px #141414;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 0px 30px;
+  font-size: 1.875em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_bowling .container .texte_intro .paragraphe_sct {
+    font-size: 1em;
+  }
+}
+
+body main #sct_intro_bowling .container .texte_intro .btn_bleu {
+  font-size: 1.25em;
+  font-weight: 700;
+  background-color: #3DBCEF;
+  width: 250px;
+  height: 60px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_bowling .container .texte_intro .btn_bleu {
+    font-size: 1em;
+  }
+}
+
+body main #sct_intro_bowling .container .texte_intro .btn_bleu:hover {
+  background-color: #E60081;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+          box-shadow: 0px 0px 10px #000000;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body main #sct_espace_bowling {
+  background-color: #ececec;
+  height: 70vh;
+  min-height: 70vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_bowling {
+    height: 80vh;
+  }
+}
+
+body main #sct_espace_bowling .container {
+  width: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_bowling .container {
+    width: 95%;
+    height: 90%;
+  }
+}
+
+body main #sct_espace_bowling .container .texte_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  height: 100%;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_bowling .container .texte_intro {
+    width: 100%;
+    height: 95%;
+  }
+}
+
+body main #sct_espace_bowling .container .texte_intro .titre_sct {
+  font-size: 3em;
+  color: #000000;
+  border-bottom: 3px solid #3DBCEF;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_bowling .container .texte_intro .titre_sct {
+    font-size: 1.5em;
+  }
+}
+
+body main #sct_espace_bowling .container .texte_intro .paragraphe_sct {
+  font-size: 1.375em;
+  font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_bowling .container .texte_intro .paragraphe_sct {
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
+body main #sct_espace_bowling .container #illustration_espace_bowling {
+  width: 46%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_bowling .container #illustration_espace_bowling {
+    display: none;
+  }
+}
+
+body main #sct_espace_bowling .container #illustration_espace_bowling img {
+  width: 100%;
+  height: 100%;
+}
+
+body main #sct_tarifs_horaires {
+  background: url(assets/images/banniere_vignettes_tarifs_horaires.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #sct_tarifs_horaires .container {
+  width: 90%;
+  height: 100%;
+  padding: 5% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type {
+  background-color: #232323;
+  width: 700px;
+  height: 750px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 20px #232323;
+          box-shadow: 0px 0px 20px #232323;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type {
+    width: 100%;
+    height: 500px;
+    margin: 2% 0;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type .titre_vignette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15%;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type .titre_vignette h2 {
+  font-size: 2.875em;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type .titre_vignette h2 {
+    font-size: 2em;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type .titre_vignette i {
+  color: #E60081;
+  font-size: 2.875em;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_horaires {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  overflow: hidden;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée {
+  height: 75px;
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée {
+    height: 40px;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée .jour {
+  color: #3DBCEF;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée .jour {
+    font-size: 1.625em;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée .horaire {
+  font-size: 1.625em;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée .horaire {
+    font-size: 1.25em;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée:hover {
+  background-color: #131313;
+  color: #E60081;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_horaires .journée:hover .jour {
+  color: white;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #info_mardi {
+  font-size: 1em;
+  font-weight: 500;
+  color: #FFFFFF;
+  width: 98%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .display {
+  background-color: #f2f2f2;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .display {
+    height: 40px;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .display:hover {
+  background-color: #131313;
+  color: #FFFFFF;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .jours {
+  width: 50%;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .jours .titre_jours {
+  font-weight: 600;
+  font-size: 1.625em;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .jours .titre_jours {
+    font-size: 1em;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .box_avant_19 {
+  width: 24%;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .box_avant_19 .prix {
+  font-weight: 700;
+  font-size: 1.375em;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .box_avant_19 .prix {
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .box_apres_19 {
+  width: 24%;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .box_apres_19 .prix {
+  font-weight: 700;
+  font-size: 1.375em;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .box_apres_19 .prix {
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .chaussures {
+  width: 49%;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .chaussures .prix {
+  font-weight: 700;
+  font-size: 1.375em;
+}
+
+@media (max-width: 375px) {
+  body main #sct_tarifs_horaires .container .vignette_type #liste_tarifs .ligne .chaussures .prix {
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #infos_complémentaires {
+  width: 100%;
+  height: 15%;
+  padding-top: 20px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main #sct_tarifs_horaires .container .vignette_type #infos_complémentaires p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+body main #sct_intro_arcade {
+  background-color: #232323;
+  width: 100%;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_arcade {
+    height: 40vh;
+  }
+}
+
+body main #sct_intro_arcade .container {
+  background: url(assets/images/banniere_arcade.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 98%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #sct_intro_arcade .container .texte_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 60%;
+  min-width: 60%;
+  max-width: 95%;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_arcade .container .texte_intro {
+    height: 80%;
+  }
+}
+
+body main #sct_intro_arcade .container .texte_intro .titre_sct {
+  color: white;
+  font-size: 6.25em;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 0px 10px #141414;
+          box-shadow: 0px 0px 10px #141414;
+  padding: 0px 30px;
+  text-shadow: 0px 0px 20px #141414;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_arcade .container .texte_intro .titre_sct {
+    font-size: 3.5em;
+  }
+}
+
+body main #sct_intro_arcade .container .texte_intro .paragraphe_sct {
+  -webkit-box-shadow: 0px 0px 10px #141414;
+          box-shadow: 0px 0px 10px #141414;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 0px 30px;
+  font-size: 1.875em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_arcade .container .texte_intro .paragraphe_sct {
+    font-size: 1em;
+  }
+}
+
+body main #sct_intro_arcade .container .texte_intro .btn_bleu {
+  font-size: 1.25em;
+  font-weight: 700;
+  background-color: #E60081;
+  width: 250px;
+  height: 60px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 375px) {
+  body main #sct_intro_arcade .container .texte_intro .btn_bleu {
+    font-size: 1em;
+  }
+}
+
+body main #sct_intro_arcade .container .texte_intro .btn_bleu:hover {
+  background-color: #3DBCEF;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+          box-shadow: 0px 0px 10px #000000;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body main #sct_espace_arcade {
+  background-color: #ececec;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade {
+    height: 80vh;
+  }
+}
+
+body main #sct_espace_arcade .container {
+  width: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+body main #sct_espace_arcade .container .texte_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container .texte_intro {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+body main #sct_espace_arcade .container .texte_intro .titre_sct {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+  border-bottom: 3px solid #E60081;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container .texte_intro .titre_sct {
+    font-size: 1.5em;
+  }
+}
+
+body main #sct_espace_arcade .container .texte_intro .paragraphe_sct {
+  font-size: 1.375em;
+  font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container .texte_intro .paragraphe_sct {
+    text-align: justify;
+    font-size: 1em;
+  }
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 70%;
+  margin-top: 50px;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #slider_espace_arcade {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    margin: 0;
+  }
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 8em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #slider_espace_arcade a {
+    display: none;
+  }
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade a i {
+  color: #3c3c3c;
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade a i:hover {
+  color: #232323;
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade a i:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade a:hover {
+  color: #232323;
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade .mySlides {
+  display: none;
+  opacity: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #181818;
+  -webkit-box-shadow: 0px 0px 10px #131313;
+          box-shadow: 0px 0px 10px #131313;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #slider_espace_arcade .mySlides {
+    width: 90%;
+  }
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade .mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade .fade_toright {
+  -webkit-animation-name: fadetoright;
+          animation-name: fadetoright;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #slider_espace_arcade .fade_toright {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@-webkit-keyframes fadetoright {
+  from {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadetoright {
+  from {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+body main #sct_espace_arcade .container #slider_espace_arcade .fade_toleft {
+  -webkit-animation-name: fade_toleft;
+          animation-name: fade_toleft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #slider_espace_arcade .fade_toleft {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@-webkit-keyframes fade_toleft {
+  from {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade_toleft {
+  from {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+body main #sct_espace_arcade .container #dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #dots {
+    margin: 0;
+  }
+}
+
+body main #sct_espace_arcade .container #dots .dot {
+  background-color: #141414;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+@media (max-width: 375px) {
+  body main #sct_espace_arcade .container #dots .dot {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+body main #sct_espace_arcade .container #dots .active,
+body main #sct_espace_arcade .container #dots .dot:hover {
+  background-color: #E60081;
+}
+
+body footer {
+  height: 600px;
+  width: 100%;
+}
+
+body footer #top_footer {
+  min-height: 500px;
+  background-color: #232323;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer #top_footer #listes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+
+@media (max-width: 375px) {
+  body footer #top_footer #listes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  body footer #top_footer #listes .liste {
+    margin: 10px 0px;
+  }
+}
+
+body footer #top_footer #listes .liste h4 {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+}
+
+body footer #top_footer #listes .liste ul li a {
+  font-size: 25px;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+
+body footer #top_footer #listes .liste ul li a:hover {
+  color: #3DBCEF;
+}
+
+body footer #top_footer #listes .liste ul li a:active {
+  color: #E60081;
+}
+
+body footer #top_footer #mentions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 80%;
+}
+
+@media (max-width: 375px) {
+  body footer #top_footer #mentions {
+    margin: 10px 0px;
+  }
+}
+
+body footer #top_footer #mentions ul {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: flex-end;
+}
+
+@media (max-width: 375px) {
+  body footer #top_footer #mentions ul {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+  }
+}
+
+body footer #top_footer #mentions ul li {
+  width: auto;
+}
+
+body footer #top_footer #mentions ul li a {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+body footer #top_footer #mentions ul li a:hover {
+  color: #E60081;
+}
+
+body footer #top_footer #mentions ul p {
+  color: #E60081;
+  padding: 0px 10px;
+}
+
+@media (max-width: 375px) {
+  body footer #top_footer #mentions ul p {
+    display: none;
+  }
+}
+
+body footer #copyrights {
+  height: 100px;
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 375px) {
+  body footer #copyrights {
+    text-align: center;
+  }
+}
+
+body footer #copyrights p {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+@media (max-width: 375px) {
+  body footer #copyrights p {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=activités.css.map */

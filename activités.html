@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="activités.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7e36d96364.js" crossorigin="anonymous"></script>
+
+    <title>Bowling du Parc à la Roche sur Yon</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+        <div class="container">
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="assets/images/logo.png" alt="logo bowling du parc à la roche sur yon">
+            </div>
+
+            <!-- NAVBAR -->
+            <nav id="navbar_fullscreen">
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="activités.html">ACTIVITÉS</a></li>
+                    <li><a href="prestations.html">PRESTATIONS</a></li>
+                    <li><a href="bowling_sportif.html">BOWLING SPORTIF</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- NAVBAR PHONE -->
+            <div id="burger_menu">
+                <!-- BOUTONS -->
+                <!-- BOUTON MENU FERMÉ -->
+                <span onclick="openNav()" id="bars_btn">
+                    <i class="fas fa-bars menu_btn"></i>
+                </span>
+                <!-- BOUTON MENU OUVERT-- -->
+                <span onclick="closeNav()" id="cross_btn">
+                    <i class="fas fa-times menu_btn closebtn"></i>
+                </span>
+
+                <div id="myNav" class="overlay">
+                    <!-- LISTE NAV -->
+                    <div class="overlay-content">
+                        <a href="index.html">ACCUEIL</a>
+                        <a href="activités.html">ACTIVITÉS</a>
+                        <a href="prestations.html">PRESTATIONS</a>
+                        <a href="bowling_sportif.html">BOWLING SPORTIF</a>
+                        <a href="contact.html">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- PARTIE BOWLING -->
+
+        <!-- SECTION INTRO BOWLING BANNIERE -->
+        <section id="sct_intro_bowling">
+            <div class="container">
+                <div class="texte_intro">
+
+                    <!-- TITRE SCT INTRO -->
+                    <h2 class="titre_sct">
+                        BOWLING
+                    </h2>
+
+                    <!-- DESCRIPTION SCT INTRO -->
+                    <p class="paragraphe_sct">
+                        14 pistes haut de gamme
+                    </p>
+
+                    <!-- BTN SCT INTRO -->
+                    <a href="#sct_tarifs_horaires" class="btn_bleu">
+                        horaires/tarifs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION ESPACE BOWLING -->
+        <section id="sct_espace_bowling">
+            <div class="container">
+                <div class="texte_intro">
+                    <h2 class="titre_sct">
+                        espace bowling
+                    </h2>
+
+                    <p class="paragraphe_sct">
+                        Le Bowling du Parc vous accueille du mercredi au dimanche.
+                    </p>
+
+                    <p class="paragraphe_sct">
+                        Vous pourrez jouer sur l’une des 14 pistes de bowling homologuées compétition dans
+                        une salle entièrement climatisée rythmée par des jeux de lumière. Les week-ends,
+                        l’équipe organise des Show Light à partir de 22h30. Et pour une ambiance encore plus
+                        fun, les pistes de bowling sont éclairées de lumières noires tous les week-ends
+                    </p>
+
+                    <p class="paragraphe_sct">
+                        Pour un confort de jeu optimal, toutes les pistes sont équipées de quilles éclairées en
+                        LED. Et parce qu’il est important que chacun puisse s’amuser quel que soit son âge, le
+                        Bowling du Parc se veut accessible à toute la famille : des bumpers sont proposés sur
+                        deux pistes pour les enfants de moins de 10 ans et des lanceurs de boule sont à disposition
+                        pour les enfants de moins de 6 ans.
+                    </p>
+
+                    <p class="paragraphe_sct">
+                        Avec son ambiance survoltée et ses nombreux équipements, le Bowling du Parc est
+                        l’endroit idéal pour des parties de bowling endiablées entre amis, en famille ou entre
+                        collègues !
+                    </p>
+                </div>
+
+                <div id="illustration_espace_bowling">
+                    <img src="assets/images/illustration_espace_bowling.jpg" alt="photo des pistes du bowling du parc">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION HORAIRES ET TARIFS BOWLING -->
+        <section id="sct_tarifs_horaires">
+
+            <!-- CONTAINER PLACEMENT DES VIGNETTES -->
+            <div class="container">
+
+                <!-- VIGNETTE HORAIRES -->
+                <div id="content_horaires" class="vignette_type">
+
+                    <!-- TITRE DE LA VIGNETTE + ICON -->
+                    <div class="titre_vignette">
+                        <h2>
+                            les horaires
+                        </h2>
+
+                        <i class="far fa-clock"></i>
+                    </div>
+
+                    <!-- LISTE HORAIRES -->
+                    <div id="liste_horaires">
+
+                        <!-- LUNDI -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                lundi
+                            </h3>
+
+                            <p class="horaire">
+                                fermé
+                            </p>
+                        </div>
+
+                        <!-- MARDI -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                mardi*
+                            </h3>
+
+                            <p class="horaire">
+                                fermé
+                            </p>
+                        </div>
+
+                        <!-- MERCREDI -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                mercredi
+                            </h3>
+
+                            <p class="horaire">
+                                15:00 / 00:00
+                            </p>
+                        </div>
+
+                        <!-- JEUDI -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                jeudi
+                            </h3>
+
+                            <p class="horaire">
+                                15:00 / 00:00
+                            </p>
+                        </div>
+
+                        <!-- VENDREDI -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                vendredi
+                            </h3>
+
+                            <p class="horaire">
+                                15:00 / 01:00
+                            </p>
+                        </div>
+
+                        <!-- SAMEDI -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                samedi
+                            </h3>
+
+                            <p class="horaire">
+                                15:00 / 03:00
+                            </p>
+                        </div>
+
+                        <!-- DIMANCHE -->
+                        <div class="journée">
+                            <h3 class="jour">
+                                dimanche
+                            </h3>
+
+                            <p class="horaire">
+                                15:00 / 20:00
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                    <!-- MARDI* -->
+                    <p id="info_mardi">
+                        *Le mardi fermé sauf sur réservation de groupe > à 30 personnes (ouvert pendant les vacances
+                        scolaires de la Zone B 15:00 / 00:00)
+                    </p>
+                </div>
+
+                <!-- VIGNETTE TARIFS -->
+                <div id="content_tarifs" class="vignette_type">
+
+                    <!-- TITRE DE LA VIGNETTE + ICON -->
+                    <div class="titre_vignette">
+                        <h2>
+                            les tarifs
+                        </h2>
+
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+
+                    <!-- LISTE TARIFS -->
+                    <div id="liste_tarifs">
+
+                        <!-- TARIFS "OPEN" -->
+                        <div class="ligne">
+                            <div class="jours display">
+                                <h3 class="titre_jours">
+                                    tarifs "open"
+                                </h3>
+                            </div>
+
+                            <div class="box_avant_19 display">
+                                <p class="prix">
+                                    avant 19h
+                                </p>
+                            </div>
+
+                            <div class="box_apres_19 display">
+                                <p class="prix">
+                                    après 19h
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- LUNDI AU JEUDI -->
+                        <div class="ligne">
+                            <div class="jours display">
+                                <h3 class="titre_jours">
+                                    lundi au jeudi
+                                </h3>
+                            </div>
+
+                            <div class="box_avant_19 display">
+                                <p class="prix">
+                                    5.50€
+                                </p>
+                            </div>
+
+                            <div class="box_apres_19 display">
+                                <p class="prix">
+                                    6.00€
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- VENDREDI & SAMEDI -->
+                        <div class="ligne">
+                            <div class="jours display">
+                                <h3 class="titre_jours">
+                                    vendredi & samedi
+                                </h3>
+                            </div>
+
+                            <div class="box_avant_19 display">
+                                <p class="prix">
+                                    5.50€
+                                </p>
+                            </div>
+
+                            <div class="box_apres_19 display">
+                                <p class="prix">
+                                    6.50€
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- DIMANCHE & FÉRIÉS -->
+                        <div class="ligne">
+                            <div class="jours display">
+                                <h3 class="titre_jours">
+                                    dimanche & fériés
+                                </h3>
+                            </div>
+
+                            <div class="box_avant_19 display">
+                                <p class="prix">
+                                    6.50€
+                                </p>
+                            </div>
+
+                            <div class="box_apres_19 display">
+                                <p class="prix">
+                                    6.50€
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- VEILLES DE FÊTES* -->
+                        <div class="ligne">
+                            <div class="jours display">
+                                <h3 class="titre_jours">
+                                    veilles de fêtes*
+                                </h3>
+                            </div>
+
+                            <div class="box_avant_19 display">
+                                <p class="prix">
+                                    5.50€
+                                </p>
+                            </div>
+
+                            <div class="box_apres_19 display">
+                                <p class="prix">
+                                    6.50€
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CHAUSSURES* -->
+                        <div class="ligne">
+                            <div class="jours display">
+                                <h3 class="titre_jours">
+                                    chaussures*
+                                </h3>
+                            </div>
+
+                            <div class="chaussures display">
+                                <p class="prix">
+                                    2€
+                                </p>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <!-- INFOS COMPLEMENTAIRES* -->
+                    <div id="infos_complémentaires">
+                        <p class="infos_complémentaires">
+                            *Veilles de fêtes, sauf dimanche.
+                        </p>
+
+                        <p class="infos_complémentaires">
+                            *Location des chaussures gratuite:
+                            - les enfants de moins de 10 ans.
+                            - les étudiants sous présentation de leur carte.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTIE ARCADE -->
+
+        <!-- SECTION INTRO ARCADE BANNIERE -->
+        <section id="sct_intro_arcade">
+            <div class="container">
+                <div class="texte_intro">
+
+                    <!-- TITRE SCT INTRO -->
+                    <h2 class="titre_sct">
+                        ARCADE
+                    </h2>
+
+                    <!-- DESCRIPTION SCT INTRO -->
+                    <p class="paragraphe_sct">
+                        Air hockey, billards, flipper, babyfoot, machine de boxe.
+                    </p>
+
+                    <!-- BTN SCT INTRO -->
+                    <a href="#sct_espace_arcade" class="btn_bleu">
+                        découvrir
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION ESPACE ARCADE -->
+        <section id="sct_espace_arcade">
+            <div class="container">
+
+                <!-- TITRE SECTION -->
+                <div class="texte_intro">
+
+                    <!-- TITRE DE LA SECTION -->
+                    <h2 class="titre_sct">
+                        espace arcade
+                    </h2>
+
+                    <!-- DESCRIPTION DE L'ESPACE -->
+                    <p class="paragraphe_sct">
+                        Entre deux parties de bowling ou à n’importe quel moment de la journée, rendez-vous dans
+                        l’espace arcade pour passer un bon moment
+                        récréatif ! Vous pourrez y tester votre adresse, votre force et vos réflexes tout en vous
+                        amusant !
+                    </p>
+
+                    <p class="paragraphe_sct">
+                        Air hockey, flipper, baby-foot, billards ou encore la machine de boxe … il y en a pour tous les
+                        goûts !
+                    </p>
+                </div>
+
+                <!-- SLIDES -->
+                <div id="slider_espace_arcade">
+
+                    <!-- BTN PREVIOUS -->
+                    <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+
+                    <!-- SLIDE 1 -->
+                    <div class="mySlides fade_toright fade_toleft">
+                        <img src="assets/images/slide_1.jpg" alt="photo air hockey" onclick="plusSlides(1)">
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="mySlides fade_toright fade_toleft">
+                        <img src="assets/images/slide_2.jpg" alt="photo air hockey avec néon" onclick="plusSlides(1)">
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="mySlides fade_toright fade_toleft">
+                        <img src="assets/images/slide_3.jpg" alt="photo des néons des tables de air hockey"
+                            onclick="plusSlides(1)">
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="mySlides fade_toright fade_toleft">
+                        <img src="assets/images/slide_4.jpg" alt="babyfoot" onclick="plusSlides(1)">
+                    </div>
+
+                    <!-- SLIDE 5 -->
+                    <div class="mySlides fade_toright fade_toleft">
+                        <img src="assets/images/slide_5.jpg"
+                            alt="billards et au passage je ne pense pas qu'il va rentrer la rouge"
+                            onclick="plusSlides(1)">
+                    </div>
+
+                    <!-- BTN NEXT -->
+                    <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                </div>
+
+                <!-- DOTS -->
+                <div id="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div id="top_footer">
+            <div id="listes">
+                <!-- LISTE ACCUEIL -->
+                <div class="liste" id="liste_accueil">
+                    <h4>
+                        ACCUEIL
+                    </h4>
+
+                    <ul>
+                        <li><a href="index.html#sct_présentation">présentation</a></li>
+                        <li><a href="index.html#sct_activités">activités</a></li>
+                        <li><a href="index.html#sct_galerie">galerie</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE ACTIVITÉS -->
+                <div class="liste" id="liste_activités">
+                    <h4>
+                        ACTIVITÉS
+                    </h4>
+
+                    <ul>
+                        <li><a href="activités.html#sct_intro_bowling">bowling</a></li>
+                        <li><a href="activités.html#sct_intro_arcade">espace arcade</a></li>
+                        <li><a href="">bar & snacking</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE PRESTATIONS -->
+                <div class="liste" id="liste_prestation">
+                    <h4>
+                        PRESTATIONS
+                    </h4>
+
+                    <ul>
+                        <li><a href="">particulier</a></li>
+                        <li><a href="">professionnel</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE BOWLING SPORTIF -->
+                <div class="liste" id="liste_bowling_sportif">
+                    <h4>
+                        BOWLING SPORTIF
+                    </h4>
+
+                    <ul>
+                        <li><a href="">le club</a></li>
+                        <li><a href="">les tournois</a></li>
+                        <li><a href="">les résultats</a></li>
+                    </ul>
+                </div>
+
+                <!-- LISTE CONTACT -->
+                <div class="liste" id="liste_contact">
+                    <h4>
+                        CONTACT
+                    </h4>
+
+                    <ul>
+                        <li><a href="contact.html#content_formulaire">nous contacter</a></li>
+                        <li><a href="contact.html#nous_trouver">adresse</a></li>
+                        <li><a href="contact.html#nos_horaires">horaires</a></li>
+                        <li><a href="contact.html#sct_maps">nous situer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="mentions">
+                <ul>
+                    <li><a href="">mentions légales</a></li>
+                    <p>|</p>
+                    <li><a href="">politique de confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="copyrights">
+            <p>
+                © 2021 Bowling du PArc - La Roche sur Yon - site réalisé par GERMOND Cyprien
+            </p>
+        </div>
+    </footer>
+
+    <!-- LINKS SCRIPTS JS -->
+    <script src="slider.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
