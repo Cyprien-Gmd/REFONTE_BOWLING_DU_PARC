@@ -30,6 +30,7 @@ body {
         display: flex;
         justify-content: center;
 
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -48,7 +49,7 @@ body {
             #burger_menu {
                 display: none;
 
-                @media (max-width: 375px) {
+                @media (max-width: 1000px) {
                     display: flex;
                 }
 
@@ -67,7 +68,7 @@ body {
                     justify-self: center;
                     width: 33.3333336;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 1000px) {
                         display: flex;
                     }
 
@@ -90,7 +91,7 @@ body {
                     justify-self: center;
                     width: 33.3333336;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 1000px) {
                         display: none;
                     }
 
@@ -120,7 +121,7 @@ body {
                     justify-content: center;
 
                     /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-                    @media screen and (max-height: 375px) {
+                    @media screen and (max-height: 1000px) {
                         // font-size: 40px;
                         top: 15px;
                         right: 35px;
@@ -165,11 +166,11 @@ body {
 
             // NAVBAR FULL SCREEN
             nav {
-                width: 60%;
+                min-width: 60%;
                 display: flex;
                 justify-content: flex-end;
 
-                @media (max-width:375px) {
+                @media (max-width:1000px) {
                     display: none;
                 }
 
@@ -188,10 +189,18 @@ body {
                             font-weight: 500;
                             padding: 0px 0px;
                             transition-timing-function: ease;
+
+                            @media (max-width: 1200px) {
+                                font-size: 20px;
+                            }
                         }
 
                         a:hover {
                             color: $bleu;
+                        }
+
+                        a:active {
+                            color: $rose;
                         }
                     }
 
@@ -204,11 +213,17 @@ body {
     // MAIN
     main {
 
+        // SECTION INTRO
+        #sct_intro {
+            height: 92vh;
+            background: url(assets/images/bgaccueil.jpg) no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
         // SECTION PRESENTATION
         #sct_présentation {
             background-color: $bleu;
-
-            height: 600px;
             width: 100%;
             display: flex;
             align-items: flex-end;
@@ -216,7 +231,7 @@ body {
             .container {
                 height: 575px;
                 background-color: #FFFFFF;
-                box-shadow: 0px 0px 20px #000000;
+                // box-shadow: 0px 0px 20px #000000;
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -226,6 +241,10 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+
+                    @media (max-width:768px) {
+                        width: 90%;
+                    }
 
                     @media (max-width:375px) {
                         width: 95%;
@@ -239,9 +258,10 @@ body {
                         flex-direction: column;
                         justify-content: space-around;
 
-                        @media (max-width:375px) {
+                        @media (max-width:1100px) {
                             width: 100%;
                             align-items: center;
+                            text-align: justify;
                         }
 
                         .titre_sct {
@@ -258,8 +278,9 @@ body {
 
                         .paragraphe_sct {
                             font-size: 20px;
-                            font-weight: 700;
+                            font-weight: 500;
                             color: $noir;
+                            text-align: justify;
 
                             @media (max-width:375px) {
                                 font-size: 15px;
@@ -292,18 +313,19 @@ body {
                         height: 90%;
                         width: 40%;
                         border-radius: 10px;
-                        overflow: hidden;
                         display: flex;
                         justify-content: flex-end;
                         align-items: center;
+                        overflow: hidden;
 
-                        @media (max-width:375px) {
+                        @media (max-width:1100px) {
                             display: none;
                         }
 
                         img {
-                            width: auto;
-                            height: 100%;
+                            width: 100%;
+                            height: auto;
+
                         }
                     }
                 }
@@ -312,9 +334,11 @@ body {
 
         // SECTION ACTIVITÉS
         #sct_activités {
-            background-color: #f2f2f2;
+            background-color: #FFFFFF;
             width: 100%;
-            min-height: 1350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             // CONTAINERS
             .containers {
@@ -333,6 +357,10 @@ body {
                     width: 80%;
                     height: 600px;
 
+                    @media (max-width:768px) {
+                        width: 90%;
+                    }
+
                     @media (max-width:375px) {
                         width: 95%;
                     }
@@ -346,7 +374,7 @@ body {
                         justify-content: flex-start;
                         align-items: center;
 
-                        @media (max-width:375px) {
+                        @media (max-width:1100px) {
                             display: none;
                         }
 
@@ -364,19 +392,18 @@ body {
                         flex-direction: column;
                         justify-content: space-around;
 
-                        @media (max-width:375px) {
+                        @media (max-width:1100px) {
                             width: 100%;
-                            align-items: center;
+
                         }
 
                         .titre_sct {
                             width: 55%;
                             display: flex;
-                            justify-content: space-between;
-                            align-items: center;
+                            width: max-content;
 
-                            @media (max-width:375px) {
-                                width: max-content;
+                            @media (max-width:1100px) {
+                                align-self: center;
                             }
 
                             h2 {
@@ -389,160 +416,166 @@ body {
                                     font-size: 2em;
                                 }
                             }
-
-                            a {
-                                margin: 0 10px;
-
-                                i {
-                                    font-size: 2.5em;
-                                    color: #E60081;
-
-                                }
-                            }
-
-                            a:hover {
-                                i {
-                                    transition: .2s ease;
-                                    color: #232323;
-                                }
-                            }
-
                         }
 
                         .paragraphe_sct {
-                            font-size: 20px;
-                            font-weight: 700;
+                            font-size: 1.25rem;
+                            font-weight: 500;
                             color: $noir;
+                            text-align: justify;
 
                             @media (max-width:375px) {
-                                font-size: 15px;
+                                font-size: 1rem;
                             }
-                        }
-                    }
-                }
-
-                // CONTAINER VIGNETTES
-                .container_vignettes {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 80%;
-
-                    @media (max-width: 1920px) {
-                        width: 95%;
-                    }
-
-                    @media (max-width:375px) {
-                        flex-direction: column;
-                        padding: 10px 0;
-                    }
-
-                    .vignette {
-                        width: 550px;
-                        height: 700px;
-                        background-color: white;
-                        border-radius: 15px;
-                        overflow: hidden;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: center;
-                        box-shadow: 0px 0px 10px #000000;
-
-                        @media (max-width:375px) {
-                            width: 350px;
-                            height: 550px;
-                            margin: 15px 0px;
-                        }
-
-                        .image_vignette {
-                            width: 100%;
-                            height: 450px;
-                            overflow: hidden;
-
-                            img {
-                                height: 100%;
-                                width: auto;
-                            }
-                        }
-
-                        .texte_vignette {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            align-items: flex-start;
-                            width: 90%;
-                            height: 250px;
-
-                            @media (max-width:375px) {
-                                width: 95%;
-                            }
-
-                            .titre_vignette {
-                                color: $rose;
-                                font-size: 45px;
-                                font-weight: 700;
-
-                                span {
-                                    font-weight: 300;
-                                }
-
-                                @media (max-width:375px) {
-                                    font-size: 35px;
-                                }
-                            }
-
-                            .para_vignette {
-                                font-size: 20px;
-                                font-weight: 700;
-
-                                @media (max-width:375px) {
-                                    font-size: 15px;
-                                }
-                            }
-
-                            .btn_vignette {
-                                width: 250px;
-                                height: 60px;
-                                border-radius: 30px;
-                                background-color: $bleu;
-                                font-size: 20px;
-                                font-weight: 700;
-                                text-transform: uppercase;
-                                align-self: flex-end;
-
-                                a {
-                                    color: white;
-                                }
-
-                                @media (max-width:375px) {
-                                    font-size: 15px;
-                                    width: 200px;
-                                    height: 50px;
-                                }
-                            }
-
-                            .btn_vignette:hover {
-                                background-color: $rose;
-                                box-shadow: 0px 0px 10px $noir;
-                                transition: .3s;
-                            }
-                        }
-                    }
-
-                    .vignette:hover {
-                        border-radius: 20px;
-                        box-shadow: 0px 0px 45px #232323;
-                        transform: translateY(5px);
-                        transition: .2s;
-
-                        .image_vignette {
-                            filter: grayscale(100%);
-                            transition: .7s;
                         }
                     }
                 }
             }
+        }
+
+        // SECTION CARDS
+        #sct_cards {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(assets/images/bgcards.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+            // CONTAINER VIGNETTES
+            .container_vignettes {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+
+                @media (max-width: 1920px) {
+                    width: 95%;
+                }
+
+                @media (max-width:768px) {
+                    flex-direction: column;
+                    padding: 10px 0;
+                }
+
+                @media (max-width:375px) {
+                    flex-direction: column;
+                    padding: 10px 0;
+                }
+
+                .vignette {
+                    width: 30%;
+                    height: 65vh;
+                    background-color: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: 0px 0px 20px #232323;
+
+                    @media (max-width:768px) {
+                        width: 80%;
+                        margin: 15px 0px;
+                    }
+
+                    @media (max-width:375px) {
+                        width: 100%;
+                        height: 550px;
+                        margin: 15px 0px;
+                    }
+
+                    .image_vignette {
+                        width: 100%;
+                        height: 60%;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .texte_vignette {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        padding: 20px 0;
+                        width: 90%;
+                        height: 35%;
+
+                        @media (max-width:375px) {
+                            width: 95%;
+                        }
+
+                        .titre_vignette {
+                            color: $gris-header;
+                            font-size: 2.875em;
+                            font-weight: 700;
+
+
+                            span {
+                                font-weight: 300;
+                                color: $bleu;
+                            }
+
+                            @media (max-width:375px) {
+                                font-size: 2.125em;
+                            }
+                        }
+
+                        .para_vignette {
+                            font-size: 1.25em;
+                            font-weight: 500;
+
+                            @media (max-width:375px) {
+                                font-size: 1em;
+                            }
+                        }
+
+                        .btn_vignette {
+                            width: 200px;
+                            height: 50px;
+                            border-radius: 30px;
+                            background-color: $gris-sombre;
+                            box-shadow: 0px 0px 5px #000000;
+                            text-transform: uppercase;
+                            align-self: flex-end;
+
+                            a {
+                                color: #FFFFFF;
+                                font-size: 1.25em;
+                                font-weight: 500;
+                            }
+
+                            @media (max-width:375px) {
+                                font-size: 1em;
+                                width: 200px;
+                                height: 50px;
+                            }
+                        }
+
+                        .btn_vignette:hover {
+                            background-color: $rose;
+                            box-shadow: 0px 0px 10px $noir;
+                            transition: .3s;
+                        }
+                    }
+                }
+
+                .vignette:hover {
+                    border-radius: 10px;
+                    box-shadow: 0px 5px 25px $gris-header;
+                    transform: scale(1.01);
+                    transition: .2s;
+                }
+            }
+
         }
 
         // SECTION GALERIE
@@ -648,20 +681,29 @@ body {
             justify-content: space-around;
             align-items: center;
 
+
             // CONTAINER DES LISTES
             #listes {
                 display: flex;
                 justify-content: space-between;
                 width: 80%;
 
-                @media (max-width:375px) {
-                    flex-direction: column;
+                @media (max-width:768px) {
+                    width: 100%;
+                    flex-wrap: wrap;
                 }
 
                 // MISE EN FORME DE TOUTES LES LISTES
                 .liste {
+
+                    padding: 10px 10px;
+
+                    @media (max-width:768px) {
+                        width: 45%;
+                    }
+
                     @media (max-width:375px) {
-                        margin: 10px 0px;
+                        width: 100%;
                     }
 
                     // TITRE DE LA LISTE
@@ -670,11 +712,19 @@ body {
                         font-weight: 600;
                         color: white;
                         margin-bottom: 30px;
+
+                        @media (max-width:768px) {
+                            margin-bottom: 10px;
+                        }
                     }
 
                     // RACCOURCIS DE LA LISTE
                     ul {
+
+
                         li {
+
+
                             a {
                                 font-size: 25px;
                                 font-weight: 300;
@@ -700,8 +750,8 @@ body {
                 justify-content: flex-end;
                 width: 80%;
 
-                @media (max-width:375px) {
-                    margin: 10px 0px;
+                @media (max-width:768px) {
+                    padding: 10px 0px;
                 }
 
                 ul {
@@ -709,6 +759,10 @@ body {
                     display: flex;
                     justify-content: space-between;
                     justify-items: flex-end;
+
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
 
                     @media (max-width:375px) {
                         width: 100%;
@@ -753,17 +807,17 @@ body {
             justify-content: center;
             align-items: center;
 
-            @media (max-width:375px) {
+            @media (max-width:768px) {
                 text-align: center;
             }
 
             p {
-                font-size: 20px;
+                font-size: 1.25rem;
                 font-weight: 500;
                 color: white;
 
                 @media (max-width:375px) {
-                    font-size: 16px;
+                    font-size: 1rem;
                 }
             }
         }

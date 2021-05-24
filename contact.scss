@@ -25,11 +25,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 
     // HEADER
-    header,
-    #header {
+    header {
         background-color: $gris-header;
         display: flex;
         justify-content: center;
+
 
         .container {
             display: flex;
@@ -49,7 +49,7 @@ body {
             #burger_menu {
                 display: none;
 
-                @media (max-width: 375px) {
+                @media (max-width: 1000px) {
                     display: flex;
                 }
 
@@ -68,7 +68,7 @@ body {
                     justify-self: center;
                     width: 33.3333336;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 1000px) {
                         display: flex;
                     }
 
@@ -91,7 +91,7 @@ body {
                     justify-self: center;
                     width: 33.3333336;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 1000px) {
                         display: none;
                     }
 
@@ -121,7 +121,7 @@ body {
                     justify-content: center;
 
                     /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-                    @media screen and (max-height: 375px) {
+                    @media screen and (max-height: 1000px) {
                         // font-size: 40px;
                         top: 15px;
                         right: 35px;
@@ -166,11 +166,11 @@ body {
 
             // NAVBAR FULL SCREEN
             nav {
-                width: 60%;
+                min-width: 60%;
                 display: flex;
                 justify-content: flex-end;
 
-                @media (max-width:375px) {
+                @media (max-width:1000px) {
                     display: none;
                 }
 
@@ -189,15 +189,24 @@ body {
                             font-weight: 500;
                             padding: 0px 0px;
                             transition-timing-function: ease;
+
+                            @media (max-width: 1200px) {
+                                font-size: 20px;
+                            }
                         }
 
                         a:hover {
                             color: $bleu;
                         }
+
+                        a:active {
+                            color: $rose;
+                        }
                     }
 
                 }
             }
+
         }
     }
 
@@ -306,9 +315,10 @@ body {
             align-items: center;
             height: 100vh;
             width: 100%;
+            padding: 10px 0;
 
-            @media (max-width:375px) {
-                height: 140vh;
+            @media (max-width:768px) {
+                height: auto;
             }
 
             .container {
@@ -318,10 +328,14 @@ body {
                 width: 80%;
                 height: 95%;
 
-                @media (max-width:375px) {
+                @media (max-width:768px) {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
+                    width: 90%;
+                }
+
+                @media (max-width:375px) {
                     width: 95%;
                 }
 
@@ -333,6 +347,10 @@ body {
                     align-items: center;
                     width: 40%;
                     height: 100%;
+
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
 
                     @media (max-width:375px) {
                         width: 100%;
@@ -350,10 +368,13 @@ body {
                         align-items: center;
                         border-radius: 10px;
                         box-shadow: 0px 0px 10px #141414;
+                        padding: 10px 0;
+                        margin: 10px 0;
 
-                        @media (max-width:375px) {
+                        @media (max-width:768px) {
                             height: 95%;
                         }
+
 
                         // TITRE FORMULAIRE
                         h3 {
@@ -361,6 +382,7 @@ body {
                             font-weight: 700;
                             color: $bleu;
                             text-transform: uppercase;
+                            padding: 10px 0;
 
                             @media (max-width:375px) {
                                 font-size: 2em;
@@ -375,6 +397,14 @@ body {
                             align-items: center;
                             height: 80%;
 
+                            @media (max-width:768px) {
+                                height: 55vh;
+                            }
+
+                            @media (max-width:375px) {
+                                width: 95%;
+                            }
+
 
                             // INPUTS FORMULAIRE
                             #input_form {
@@ -387,7 +417,9 @@ body {
                                 border: none;
 
                                 @media (max-width:375px) {
-                                    width: 95%;
+                                    width: 100%;
+                                    height: auto;
+                                    flex-direction: column;
                                 }
 
                                 input {
@@ -399,9 +431,9 @@ body {
                                     margin: 5px 0;
 
                                     @media (max-width:375px) {
-                                        height: 25px;
-                                        width: 43%;
-                                        border: none;
+                                        padding: 5px;
+                                        height: 30px;
+                                        width: 95%;
                                     }
                                 }
                             }
@@ -409,15 +441,15 @@ body {
                             // TEXTAREA FORMULAIRE
                             #textarea_form {
                                 display: flex;
-                                justify-content: space-between;
-                                align-items: center;
+                                justify-content: center;
+                                align-items: flex-start;
                                 width: 90%;
                                 height: 65%;
                                 border: none;
 
                                 @media (max-width:375px) {
-                                    height: 65%;
-                                    width: 95%;
+                                    height: 60%;
+                                    width: 100%;
                                 }
 
                                 textarea {
@@ -427,10 +459,10 @@ body {
                                     height: 80%;
                                     resize: none;
                                     overflow-y: scroll;
-                                    padding: 15px 0 0 15px;
+                                    padding: 15px;
 
                                     @media (max-width:375px) {
-                                        border: none;
+                                        padding: 5px;
                                     }
 
                                 }
@@ -448,6 +480,7 @@ body {
                             font-weight: 700;
                             color: white;
                             text-transform: uppercase;
+                            padding: 10px 0;
 
                             @media (max-width:375px) {
                                 font-size: 1.25em;
@@ -471,7 +504,7 @@ body {
                         overflow: hidden;
                         border-radius: 10px;
 
-                        @media (max-width:375px) {
+                        @media (max-width:768px) {
                             display: none;
                         }
 
@@ -494,8 +527,10 @@ body {
                     background-color: #dadada;
                     border-radius: 10px;
                     box-shadow: 0px 0px 10px #141414;
+                    padding: 10px 0;
+                    margin: 10px 0;
 
-                    @media (max-width:375px) {
+                    @media (max-width:768px) {
                         width: 95%;
                         height: 60%;
                     }
@@ -506,10 +541,11 @@ body {
                         flex-direction: column;
                         justify-content: space-around;
                         align-items: flex-start;
+                        padding: 10px 0;
                         width: 80%;
                         height: 35%;
 
-                        @media (max-width:375px) {
+                        @media (max-width:768px) {
                             width: 95%;
                         }
 
@@ -527,7 +563,6 @@ body {
                         }
 
                         #liste_infos {
-                            height: auto;
                             width: 100%;
                             display: flex;
                             flex-flow: row wrap;
@@ -542,7 +577,9 @@ body {
                             }
 
                             .info {
-                                height: 70%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
 
                                 .titre_info {
                                     display: flex;
@@ -624,14 +661,15 @@ body {
                         background-color: $gris-sombre;
                         border-radius: 20px;
 
-                        @media (max-width:375px) {
+                        @media (max-width:768px) {
                             width: 95%;
-                            height: 60%;
+                            height: auto;
                         }
 
                         // TITRE VIGNETTE
                         .titre_vignette {
                             align-self: center;
+                            padding: 10px 0;
 
                             h2 {
                                 text-transform: uppercase;
@@ -703,6 +741,7 @@ body {
                             text-align: center;
                             font-size: 1em;
                             width: 90%;
+                            padding: 10px 0;
 
                             @media (max-width:375px) {
                                 font-size: 0.75em;
@@ -727,20 +766,29 @@ body {
             justify-content: space-around;
             align-items: center;
 
+
             // CONTAINER DES LISTES
             #listes {
                 display: flex;
                 justify-content: space-between;
                 width: 80%;
 
-                @media (max-width:375px) {
-                    flex-direction: column;
+                @media (max-width:768px) {
+                    width: 100%;
+                    flex-wrap: wrap;
                 }
 
                 // MISE EN FORME DE TOUTES LES LISTES
                 .liste {
+
+                    padding: 10px 10px;
+
+                    @media (max-width:768px) {
+                        width: 45%;
+                    }
+
                     @media (max-width:375px) {
-                        margin: 10px 0px;
+                        width: 100%;
                     }
 
                     // TITRE DE LA LISTE
@@ -749,11 +797,19 @@ body {
                         font-weight: 600;
                         color: white;
                         margin-bottom: 30px;
+
+                        @media (max-width:768px) {
+                            margin-bottom: 10px;
+                        }
                     }
 
                     // RACCOURCIS DE LA LISTE
                     ul {
+
+
                         li {
+
+
                             a {
                                 font-size: 25px;
                                 font-weight: 300;
@@ -779,8 +835,8 @@ body {
                 justify-content: flex-end;
                 width: 80%;
 
-                @media (max-width:375px) {
-                    margin: 10px 0px;
+                @media (max-width:768px) {
+                    padding: 10px 0px;
                 }
 
                 ul {
@@ -788,6 +844,10 @@ body {
                     display: flex;
                     justify-content: space-between;
                     justify-items: flex-end;
+
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
 
                     @media (max-width:375px) {
                         width: 100%;
@@ -832,17 +892,17 @@ body {
             justify-content: center;
             align-items: center;
 
-            @media (max-width:375px) {
+            @media (max-width:768px) {
                 text-align: center;
             }
 
             p {
-                font-size: 20px;
+                font-size: 1.25rem;
                 font-weight: 500;
                 color: white;
 
                 @media (max-width:375px) {
-                    font-size: 16px;
+                    font-size: 1rem;
                 }
             }
         }

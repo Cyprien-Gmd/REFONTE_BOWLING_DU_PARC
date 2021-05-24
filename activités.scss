@@ -30,6 +30,7 @@ body {
         display: flex;
         justify-content: center;
 
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -48,7 +49,7 @@ body {
             #burger_menu {
                 display: none;
 
-                @media (max-width: 375px) {
+                @media (max-width: 1000px) {
                     display: flex;
                 }
 
@@ -67,7 +68,7 @@ body {
                     justify-self: center;
                     width: 33.3333336;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 1000px) {
                         display: flex;
                     }
 
@@ -90,7 +91,7 @@ body {
                     justify-self: center;
                     width: 33.3333336;
 
-                    @media (max-width: 375px) {
+                    @media (max-width: 1000px) {
                         display: none;
                     }
 
@@ -120,7 +121,7 @@ body {
                     justify-content: center;
 
                     /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-                    @media screen and (max-height: 375px) {
+                    @media screen and (max-height: 1000px) {
                         // font-size: 40px;
                         top: 15px;
                         right: 35px;
@@ -165,11 +166,11 @@ body {
 
             // NAVBAR FULL SCREEN
             nav {
-                width: 60%;
+                min-width: 60%;
                 display: flex;
                 justify-content: flex-end;
 
-                @media (max-width:375px) {
+                @media (max-width:1000px) {
                     display: none;
                 }
 
@@ -188,17 +189,27 @@ body {
                             font-weight: 500;
                             padding: 0px 0px;
                             transition-timing-function: ease;
+
+                            @media (max-width: 1200px) {
+                                font-size: 20px;
+                            }
                         }
 
                         a:hover {
                             color: $bleu;
                         }
+
+                        a:active {
+                            color: $rose;
+                        }
                     }
 
                 }
             }
+
         }
     }
+
 
     // MAIN
     main {
@@ -316,6 +327,10 @@ body {
                 justify-content: space-around;
                 align-items: center;
 
+                @media (max-width:768px) {
+                    width: 90%;
+                }
+
                 @media (max-width:375px) {
                     width: 95%;
                     height: 90%;
@@ -330,6 +345,10 @@ body {
                     width: 50%;
                     height: 100%;
 
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
+
                     @media (max-width:375px) {
                         width: 100%;
                         height: 95%;
@@ -341,6 +360,10 @@ body {
                         border-bottom: 3px solid $bleu;
                         text-transform: uppercase;
                         font-weight: 700;
+
+                        @media (max-width:768px) {
+                            align-self: center;
+                        }
 
                         @media (max-width:375px) {
                             font-size: 1.5em;
@@ -366,7 +389,7 @@ body {
                     border-radius: 5px;
                     overflow: hidden;
 
-                    @media (max-width:375px) {
+                    @media (max-width:768px) {
                         display: none;
                     }
 
@@ -392,11 +415,14 @@ body {
 
             .container {
                 width: 90%;
-                height: 100%;
                 padding: 5% 0;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+
+                @media (max-width:768px) {
+                    flex-direction: column;
+                }
 
                 @media (max-width:375px) {
                     flex-direction: column;
@@ -406,7 +432,7 @@ body {
                 // MISE EN FORME DE LA VIGNETTE
                 .vignette_type {
                     background-color: $gris-sombre;
-                    width: 700px;
+                    width: 45%;
                     height: 750px;
                     border-radius: 20px;
                     display: flex;
@@ -414,6 +440,11 @@ body {
                     justify-content: flex-start;
                     align-items: center;
                     box-shadow: 0px 0px 20px #232323;
+                    margin: 10px 10px;
+
+                    @media (max-width:768px) {
+                        width: 90%;
+                    }
 
                     @media (max-width:375px) {
                         width: 100%;
@@ -720,11 +751,11 @@ body {
         // SLIDER IMAGES ARCADES
         #sct_espace_arcade {
             background-color: #ececec;
-            height: 100vh;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px 0;
 
             @media (max-width:375px) {
                 height: 80vh;
@@ -737,6 +768,10 @@ body {
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+
+                @media (max-width:768px) {
+                    width: 90%;
+                }
 
                 @media (max-width:375px) {
                     width: 95%;
@@ -773,6 +808,7 @@ body {
                     .paragraphe_sct {
                         font-size: 1.375em;
                         font-weight: 500;
+                        padding: 10px 0;
 
                         @media (max-width:375px) {
                             text-align: justify;
@@ -839,6 +875,11 @@ body {
                         background-color: rgb(24, 24, 24);
                         box-shadow: 0px 0px 10px #131313;
 
+                        @media (max-width:768px) {
+                            width: 80%;
+                            height: 60%;
+                        }
+
                         @media (max-width:375px) {
                             width: 90%;
                         }
@@ -856,7 +897,7 @@ body {
                         animation-timing-function: ease-out;
 
 
-                        @media (max-width:375px) {
+                        @media (max-width:768px) {
                             animation: none;
                         }
                     }
@@ -878,7 +919,7 @@ body {
                         animation-duration: 1.5s;
                         animation-timing-function: ease-out;
 
-                        @media (max-width:375px) {
+                        @media (max-width:768px) {
                             animation: none;
                         }
                     }
@@ -944,20 +985,29 @@ body {
             justify-content: space-around;
             align-items: center;
 
+
             // CONTAINER DES LISTES
             #listes {
                 display: flex;
                 justify-content: space-between;
                 width: 80%;
 
-                @media (max-width:375px) {
-                    flex-direction: column;
+                @media (max-width:768px) {
+                    width: 100%;
+                    flex-wrap: wrap;
                 }
 
                 // MISE EN FORME DE TOUTES LES LISTES
                 .liste {
+
+                    padding: 10px 10px;
+
+                    @media (max-width:768px) {
+                        width: 45%;
+                    }
+
                     @media (max-width:375px) {
-                        margin: 10px 0px;
+                        width: 100%;
                     }
 
                     // TITRE DE LA LISTE
@@ -966,11 +1016,19 @@ body {
                         font-weight: 600;
                         color: white;
                         margin-bottom: 30px;
+
+                        @media (max-width:768px) {
+                            margin-bottom: 10px;
+                        }
                     }
 
                     // RACCOURCIS DE LA LISTE
                     ul {
+
+
                         li {
+
+
                             a {
                                 font-size: 25px;
                                 font-weight: 300;
@@ -996,8 +1054,8 @@ body {
                 justify-content: flex-end;
                 width: 80%;
 
-                @media (max-width:375px) {
-                    margin: 10px 0px;
+                @media (max-width:768px) {
+                    padding: 10px 0px;
                 }
 
                 ul {
@@ -1005,6 +1063,10 @@ body {
                     display: flex;
                     justify-content: space-between;
                     justify-items: flex-end;
+
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
 
                     @media (max-width:375px) {
                         width: 100%;
@@ -1049,17 +1111,17 @@ body {
             justify-content: center;
             align-items: center;
 
-            @media (max-width:375px) {
+            @media (max-width:768px) {
                 text-align: center;
             }
 
             p {
-                font-size: 20px;
+                font-size: 1.25rem;
                 font-weight: 500;
                 color: white;
 
                 @media (max-width:375px) {
-                    font-size: 16px;
+                    font-size: 1rem;
                 }
             }
         }

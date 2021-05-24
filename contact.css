@@ -17,8 +17,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-body header,
-body #header {
+body header {
   background-color: #141414;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,8 +27,7 @@ body #header {
           justify-content: center;
 }
 
-body header .container,
-body #header .container {
+body header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,34 +40,29 @@ body #header .container {
   width: 95%;
 }
 
-body header .container #logo img,
-body #header .container #logo img {
+body header .container #logo img {
   width: 210px;
   height: auto;
 }
 
-body header .container #burger_menu,
-body #header .container #burger_menu {
+body header .container #burger_menu {
   display: none;
 }
 
-@media (max-width: 375px) {
-  body header .container #burger_menu,
-  body #header .container #burger_menu {
+@media (max-width: 1000px) {
+  body header .container #burger_menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-body header .container #burger_menu span,
-body #header .container #burger_menu span {
+body header .container #burger_menu span {
   height: 100%;
   width: 100%;
 }
 
-body header .container #burger_menu #bars_btn,
-body #header .container #burger_menu #bars_btn {
+body header .container #burger_menu #bars_btn {
   cursor: pointer;
   display: none;
   width: -webkit-max-content;
@@ -81,29 +74,25 @@ body #header .container #burger_menu #bars_btn {
   width: 33.3333336;
 }
 
-@media (max-width: 375px) {
-  body header .container #burger_menu #bars_btn,
-  body #header .container #burger_menu #bars_btn {
+@media (max-width: 1000px) {
+  body header .container #burger_menu #bars_btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-body header .container #burger_menu #bars_btn .menu_btn,
-body #header .container #burger_menu #bars_btn .menu_btn {
+body header .container #burger_menu #bars_btn .menu_btn {
   color: #FFFFFF;
   font-size: 40px;
 }
 
-body header .container #burger_menu #bars_btn .menu_btn:hover,
-body #header .container #burger_menu #bars_btn .menu_btn:hover {
+body header .container #burger_menu #bars_btn .menu_btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-body header .container #burger_menu #cross_btn,
-body #header .container #burger_menu #cross_btn {
+body header .container #burger_menu #cross_btn {
   cursor: pointer;
   display: none;
   width: -webkit-max-content;
@@ -115,27 +104,23 @@ body #header .container #burger_menu #cross_btn {
   width: 33.3333336;
 }
 
-@media (max-width: 375px) {
-  body header .container #burger_menu #cross_btn,
-  body #header .container #burger_menu #cross_btn {
+@media (max-width: 1000px) {
+  body header .container #burger_menu #cross_btn {
     display: none;
   }
 }
 
-body header .container #burger_menu #cross_btn .menu_btn,
-body #header .container #burger_menu #cross_btn .menu_btn {
+body header .container #burger_menu #cross_btn .menu_btn {
   color: #FFFFFF;
   font-size: 40px;
 }
 
-body header .container #burger_menu #cross_btn .menu_btn:hover,
-body #header .container #burger_menu #cross_btn .menu_btn:hover {
+body header .container #burger_menu #cross_btn .menu_btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-body header .container #burger_menu .overlay,
-body #header .container #burger_menu .overlay {
+body header .container #burger_menu .overlay {
   height: 0vh;
   width: 100%;
   position: fixed;
@@ -160,16 +145,14 @@ body #header .container #burger_menu .overlay {
   /* Position the content inside the overlay */
 }
 
-@media screen and (max-height: 375px) {
-  body header .container #burger_menu .overlay,
-  body #header .container #burger_menu .overlay {
+@media screen and (max-height: 1000px) {
+  body header .container #burger_menu .overlay {
     top: 15px;
     right: 35px;
   }
 }
 
-body header .container #burger_menu .overlay .overlay-content,
-body #header .container #burger_menu .overlay .overlay-content {
+body header .container #burger_menu .overlay .overlay-content {
   position: relative;
   top: 0;
   width: 100%;
@@ -193,8 +176,7 @@ body #header .container #burger_menu .overlay .overlay-content {
           align-items: center;
 }
 
-body header .container #burger_menu .overlay .overlay-content a,
-body #header .container #burger_menu .overlay .overlay-content a {
+body header .container #burger_menu .overlay .overlay-content a {
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: 400;
@@ -207,18 +189,15 @@ body #header .container #burger_menu .overlay .overlay-content a {
 }
 
 body header .container #burger_menu .overlay .overlay-content a:hover,
-body header .container #burger_menu .overlay .overlay-content a:focus,
-body #header .container #burger_menu .overlay .overlay-content a:hover,
-body #header .container #burger_menu .overlay .overlay-content a:focus {
+body header .container #burger_menu .overlay .overlay-content a:focus {
   font-weight: 600;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #3DBCEF;
 }
 
-body header .container nav,
-body #header .container nav {
-  width: 60%;
+body header .container nav {
+  min-width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,15 +206,13 @@ body #header .container nav {
           justify-content: flex-end;
 }
 
-@media (max-width: 375px) {
-  body header .container nav,
-  body #header .container nav {
+@media (max-width: 1000px) {
+  body header .container nav {
     display: none;
   }
 }
 
-body header .container nav ul,
-body #header .container nav ul {
+body header .container nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,13 +225,11 @@ body #header .container nav ul {
   width: 100%;
 }
 
-body header .container nav ul li,
-body #header .container nav ul li {
+body header .container nav ul li {
   padding: 10px 10px;
 }
 
-body header .container nav ul li a,
-body #header .container nav ul li a {
+body header .container nav ul li a {
   color: #FFFFFF;
   font-size: 25px;
   font-weight: 500;
@@ -263,9 +238,18 @@ body #header .container nav ul li a {
           transition-timing-function: ease;
 }
 
-body header .container nav ul li a:hover,
-body #header .container nav ul li a:hover {
+@media (max-width: 1200px) {
+  body header .container nav ul li a {
+    font-size: 20px;
+  }
+}
+
+body header .container nav ul li a:hover {
   color: #3DBCEF;
+}
+
+body header .container nav ul li a:active {
+  color: #E60081;
 }
 
 body main #sct_intro_contact {
@@ -414,11 +398,12 @@ body main #sct_formulaire {
           align-items: center;
   height: 100vh;
   width: 100%;
+  padding: 10px 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire {
-    height: 140vh;
+    height: auto;
   }
 }
 
@@ -436,7 +421,7 @@ body main #sct_formulaire .container {
   height: 95%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -448,6 +433,12 @@ body main #sct_formulaire .container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  body main #sct_formulaire .container {
     width: 95%;
   }
 }
@@ -468,6 +459,12 @@ body main #sct_formulaire .container #content_formulaire {
           align-items: center;
   width: 40%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  body main #sct_formulaire .container #content_formulaire {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -496,9 +493,11 @@ body main #sct_formulaire .container #content_formulaire #formulaire {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 10px #141414;
           box-shadow: 0px 0px 10px #141414;
+  padding: 10px 0;
+  margin: 10px 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire .container #content_formulaire #formulaire {
     height: 95%;
   }
@@ -509,6 +508,7 @@ body main #sct_formulaire .container #content_formulaire #formulaire h3 {
   font-weight: 700;
   color: #3DBCEF;
   text-transform: uppercase;
+  padding: 10px 0;
 }
 
 @media (max-width: 375px) {
@@ -534,6 +534,18 @@ body main #sct_formulaire .container #content_formulaire #formulaire form {
   height: 80%;
 }
 
+@media (max-width: 768px) {
+  body main #sct_formulaire .container #content_formulaire #formulaire form {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 375px) {
+  body main #sct_formulaire .container #content_formulaire #formulaire form {
+    width: 95%;
+  }
+}
+
 body main #sct_formulaire .container #content_formulaire #formulaire form #input_form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -553,7 +565,12 @@ body main #sct_formulaire .container #content_formulaire #formulaire form #input
 
 @media (max-width: 375px) {
   body main #sct_formulaire .container #content_formulaire #formulaire form #input_form {
-    width: 95%;
+    width: 100%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -568,9 +585,9 @@ body main #sct_formulaire .container #content_formulaire #formulaire form #input
 
 @media (max-width: 375px) {
   body main #sct_formulaire .container #content_formulaire #formulaire form #input_form input {
-    height: 25px;
-    width: 43%;
-    border: none;
+    padding: 5px;
+    height: 30px;
+    width: 95%;
   }
 }
 
@@ -578,12 +595,12 @@ body main #sct_formulaire .container #content_formulaire #formulaire form #texta
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 90%;
   height: 65%;
   border: none;
@@ -591,8 +608,8 @@ body main #sct_formulaire .container #content_formulaire #formulaire form #texta
 
 @media (max-width: 375px) {
   body main #sct_formulaire .container #content_formulaire #formulaire form #textarea_form {
-    height: 65%;
-    width: 95%;
+    height: 60%;
+    width: 100%;
   }
 }
 
@@ -603,12 +620,12 @@ body main #sct_formulaire .container #content_formulaire #formulaire form #texta
   height: 80%;
   resize: none;
   overflow-y: scroll;
-  padding: 15px 0 0 15px;
+  padding: 15px;
 }
 
 @media (max-width: 375px) {
   body main #sct_formulaire .container #content_formulaire #formulaire form #textarea_form textarea {
-    border: none;
+    padding: 5px;
   }
 }
 
@@ -622,6 +639,7 @@ body main #sct_formulaire .container #content_formulaire #formulaire #btn_submit
   font-weight: 700;
   color: white;
   text-transform: uppercase;
+  padding: 10px 0;
 }
 
 @media (max-width: 375px) {
@@ -647,7 +665,7 @@ body main #sct_formulaire .container #content_formulaire #illustration_formulair
   border-radius: 10px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire .container #content_formulaire #illustration_formulaire {
     display: none;
   }
@@ -677,9 +695,11 @@ body main #sct_formulaire .container #content_adresse {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 10px #141414;
           box-shadow: 0px 0px 10px #141414;
+  padding: 10px 0;
+  margin: 10px 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire .container #content_adresse {
     width: 95%;
     height: 60%;
@@ -699,11 +719,12 @@ body main #sct_formulaire .container #content_adresse #nous_trouver {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 10px 0;
   width: 80%;
   height: 35%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire .container #content_adresse #nous_trouver {
     width: 95%;
   }
@@ -727,7 +748,6 @@ body main #sct_formulaire .container #content_adresse #nous_trouver h3 {
 }
 
 body main #sct_formulaire .container #content_adresse #nous_trouver #liste_infos {
-  height: auto;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -761,7 +781,16 @@ body main #sct_formulaire .container #content_adresse #nous_trouver #liste_infos
 }
 
 body main #sct_formulaire .container #content_adresse #nous_trouver #liste_infos .info {
-  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body main #sct_formulaire .container #content_adresse #nous_trouver #liste_infos .info .titre_info {
@@ -869,10 +898,10 @@ body main #sct_formulaire .container #content_adresse #nos_horaires {
   border-radius: 20px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_formulaire .container #content_adresse #nos_horaires {
     width: 95%;
-    height: 60%;
+    height: auto;
   }
 }
 
@@ -880,6 +909,7 @@ body main #sct_formulaire .container #content_adresse #nos_horaires .titre_vigne
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding: 10px 0;
 }
 
 body main #sct_formulaire .container #content_adresse #nos_horaires .titre_vignette h2 {
@@ -966,6 +996,7 @@ body main #sct_formulaire .container #content_adresse #nos_horaires #info_mardi 
   text-align: center;
   font-size: 1em;
   width: 90%;
+  padding: 10px 0;
 }
 
 @media (max-width: 375px) {
@@ -1006,18 +1037,27 @@ body footer #top_footer #listes {
   width: 80%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body footer #top_footer #listes {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+body footer #top_footer #listes .liste {
+  padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  body footer #top_footer #listes .liste {
+    width: 45%;
   }
 }
 
 @media (max-width: 375px) {
   body footer #top_footer #listes .liste {
-    margin: 10px 0px;
+    width: 100%;
   }
 }
 
@@ -1026,6 +1066,12 @@ body footer #top_footer #listes .liste h4 {
   font-weight: 600;
   color: white;
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  body footer #top_footer #listes .liste h4 {
+    margin-bottom: 10px;
+  }
 }
 
 body footer #top_footer #listes .liste ul li a {
@@ -1053,9 +1099,9 @@ body footer #top_footer #mentions {
   width: 80%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body footer #top_footer #mentions {
-    margin: 10px 0px;
+    padding: 10px 0px;
   }
 }
 
@@ -1068,6 +1114,12 @@ body footer #top_footer #mentions ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   justify-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  body footer #top_footer #mentions ul {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1124,21 +1176,21 @@ body footer #copyrights {
           align-items: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body footer #copyrights {
     text-align: center;
   }
 }
 
 body footer #copyrights p {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   color: white;
 }
 
 @media (max-width: 375px) {
   body footer #copyrights p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=contact.css.map */

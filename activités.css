@@ -49,7 +49,7 @@ body header .container #burger_menu {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1000px) {
   body header .container #burger_menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -74,7 +74,7 @@ body header .container #burger_menu #bars_btn {
   width: 33.3333336;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1000px) {
   body header .container #burger_menu #bars_btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -104,7 +104,7 @@ body header .container #burger_menu #cross_btn {
   width: 33.3333336;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1000px) {
   body header .container #burger_menu #cross_btn {
     display: none;
   }
@@ -145,7 +145,7 @@ body header .container #burger_menu .overlay {
   /* Position the content inside the overlay */
 }
 
-@media screen and (max-height: 375px) {
+@media screen and (max-height: 1000px) {
   body header .container #burger_menu .overlay {
     top: 15px;
     right: 35px;
@@ -197,7 +197,7 @@ body header .container #burger_menu .overlay .overlay-content a:focus {
 }
 
 body header .container nav {
-  width: 60%;
+  min-width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,7 +206,7 @@ body header .container nav {
           justify-content: flex-end;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1000px) {
   body header .container nav {
     display: none;
   }
@@ -238,8 +238,18 @@ body header .container nav ul li a {
           transition-timing-function: ease;
 }
 
+@media (max-width: 1200px) {
+  body header .container nav ul li a {
+    font-size: 20px;
+  }
+}
+
 body header .container nav ul li a:hover {
   color: #3DBCEF;
+}
+
+body header .container nav ul li a:active {
+  color: #E60081;
 }
 
 body main #sct_intro_bowling {
@@ -408,6 +418,12 @@ body main #sct_espace_bowling .container {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  body main #sct_espace_bowling .container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 375px) {
   body main #sct_espace_bowling .container {
     width: 95%;
@@ -433,6 +449,12 @@ body main #sct_espace_bowling .container .texte_intro {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  body main #sct_espace_bowling .container .texte_intro {
+    width: 100%;
+  }
+}
+
 @media (max-width: 375px) {
   body main #sct_espace_bowling .container .texte_intro {
     width: 100%;
@@ -446,6 +468,14 @@ body main #sct_espace_bowling .container .texte_intro .titre_sct {
   border-bottom: 3px solid #3DBCEF;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  body main #sct_espace_bowling .container .texte_intro .titre_sct {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 @media (max-width: 375px) {
@@ -473,7 +503,7 @@ body main #sct_espace_bowling .container #illustration_espace_bowling {
   overflow: hidden;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_espace_bowling .container #illustration_espace_bowling {
     display: none;
   }
@@ -503,7 +533,6 @@ body main #sct_tarifs_horaires {
 
 body main #sct_tarifs_horaires .container {
   width: 90%;
-  height: 100%;
   padding: 5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,6 +542,15 @@ body main #sct_tarifs_horaires .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 768px) {
+  body main #sct_tarifs_horaires .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 375px) {
@@ -527,7 +565,7 @@ body main #sct_tarifs_horaires .container {
 
 body main #sct_tarifs_horaires .container .vignette_type {
   background-color: #232323;
-  width: 700px;
+  width: 45%;
   height: 750px;
   border-radius: 20px;
   display: -webkit-box;
@@ -545,6 +583,13 @@ body main #sct_tarifs_horaires .container .vignette_type {
           align-items: center;
   -webkit-box-shadow: 0px 0px 20px #232323;
           box-shadow: 0px 0px 20px #232323;
+  margin: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  body main #sct_tarifs_horaires .container .vignette_type {
+    width: 90%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -951,7 +996,6 @@ body main #sct_intro_arcade .container .texte_intro .btn_bleu:hover {
 
 body main #sct_espace_arcade {
   background-color: #ececec;
-  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -962,6 +1006,7 @@ body main #sct_espace_arcade {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px 0;
 }
 
 @media (max-width: 375px) {
@@ -986,6 +1031,12 @@ body main #sct_espace_arcade .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 768px) {
+  body main #sct_espace_arcade .container {
+    width: 90%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1037,6 +1088,7 @@ body main #sct_espace_arcade .container .texte_intro .titre_sct {
 body main #sct_espace_arcade .container .texte_intro .paragraphe_sct {
   font-size: 1.375em;
   font-weight: 500;
+  padding: 10px 0;
 }
 
 @media (max-width: 375px) {
@@ -1129,6 +1181,13 @@ body main #sct_espace_arcade .container #slider_espace_arcade .mySlides {
           box-shadow: 0px 0px 10px #131313;
 }
 
+@media (max-width: 768px) {
+  body main #sct_espace_arcade .container #slider_espace_arcade .mySlides {
+    width: 80%;
+    height: 60%;
+  }
+}
+
 @media (max-width: 375px) {
   body main #sct_espace_arcade .container #slider_espace_arcade .mySlides {
     width: 90%;
@@ -1149,7 +1208,7 @@ body main #sct_espace_arcade .container #slider_espace_arcade .fade_toright {
           animation-timing-function: ease-out;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_espace_arcade .container #slider_espace_arcade .fade_toright {
     -webkit-animation: none;
             animation: none;
@@ -1191,7 +1250,7 @@ body main #sct_espace_arcade .container #slider_espace_arcade .fade_toleft {
           animation-timing-function: ease-out;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body main #sct_espace_arcade .container #slider_espace_arcade .fade_toleft {
     -webkit-animation: none;
             animation: none;
@@ -1298,18 +1357,27 @@ body footer #top_footer #listes {
   width: 80%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body footer #top_footer #listes {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+body footer #top_footer #listes .liste {
+  padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+  body footer #top_footer #listes .liste {
+    width: 45%;
   }
 }
 
 @media (max-width: 375px) {
   body footer #top_footer #listes .liste {
-    margin: 10px 0px;
+    width: 100%;
   }
 }
 
@@ -1318,6 +1386,12 @@ body footer #top_footer #listes .liste h4 {
   font-weight: 600;
   color: white;
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  body footer #top_footer #listes .liste h4 {
+    margin-bottom: 10px;
+  }
 }
 
 body footer #top_footer #listes .liste ul li a {
@@ -1345,9 +1419,9 @@ body footer #top_footer #mentions {
   width: 80%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body footer #top_footer #mentions {
-    margin: 10px 0px;
+    padding: 10px 0px;
   }
 }
 
@@ -1360,6 +1434,12 @@ body footer #top_footer #mentions ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   justify-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  body footer #top_footer #mentions ul {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1416,21 +1496,21 @@ body footer #copyrights {
           align-items: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body footer #copyrights {
     text-align: center;
   }
 }
 
 body footer #copyrights p {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   color: white;
 }
 
 @media (max-width: 375px) {
   body footer #copyrights p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=activités.css.map */
